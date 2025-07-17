@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use 'sass:list';
+@use '../00_settings' as settings;
+
+@mixin layout-grid() {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns:
+            [full-bleed-start] var(--layout-margin)
+                [wide-content-start] 1fr 1fr
+                    [content-start] repeat(calc(var(--layout-columns) - 4), 1fr)
+                    [content-end] 1fr 1fr
+                [wide-content-end] var(--layout-margin)
+            [full-bleed-end];
+}
+
+@mixin layout__full-bleed {
+    grid-column: full-bleed;
+}
+
+@mixin layout__wide-content {
+    grid-column: wide-content;
+}
+
+@mixin layout__content {
+    grid-column: wide-content;
+
+    @media (min-width: settings.$bp-sm) {
+        grid-column: content;
+    }
+}
+
+@mixin layout_span() {
+    grid-column: var(--column-start, 1)/var(--column-end, -1);
+}

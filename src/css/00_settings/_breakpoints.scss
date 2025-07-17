@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$bp-xxs: '320px';
+$bp-xs: '480px';
+$bp-sm: '768px';
+$bp-md: '1024px';
+$bp-lg: '1280px';
+$bp-xl: '1440px';
+
+$breakpoints-map: (
+    'xxs': $bp-xxs,
+    'xs': $bp-xs,
+    'sm': $bp-sm,
+    'md': $bp-md,
+    'lg': $bp-lg,
+    'xl': $bp-xl,
+);
+

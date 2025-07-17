@@ -1,0 +1,6 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.hero__image {
+    object-fit: cover;
+}

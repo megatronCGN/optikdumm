@@ -1,0 +1,27 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.page {
+    @include tools.layout-grid;
+
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.page__header {
+    @include tools.layout__wide-content;
+}
+
+.page__main {
+    @include tools.layout__full-bleed;
+    @include tools.layout-grid;
+}
+
+.page-main__hero {
+    @include tools.layout__full-bleed;
+}
+
+.page-main__content {
+    @include tools.layout__wide-content;
+}

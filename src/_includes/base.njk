@@ -1,0 +1,79 @@
+---
+title: Startseite
+heroImgSrc: /img/hero.png
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <head>
+            {#
+            Wir folgen den Empfehlungen von Harry Roberts (@csswizardry) aus seinem Talk "Get your <head> straight"
+            (https://www.youtube.com/watch?v=MHyAOZ45vnU) für die Reihenfolge von head Elementen:
+            - meta charset|http-equiv|viewport
+            - <title>
+            - preconnect
+            - <script src="" async></script>
+            - Synchronous JS
+            - Synchronous CSS
+            - preload
+            - <script src="" defer></script>
+            - prefetch / prerender
+            - Everything else ('SEO' meta tags, icons, Open Graph, etc.)
+            #}
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>Optik Dumm {{ '- ' ~ title }}</title>
+
+            {#------- Synchronous JS -------#}
+            {# JS go/nogo #}
+            <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+            {#------- Synchronous CSS -------#}
+            <link rel="stylesheet" href="/css/style.css">
+
+            {#------- Critical CSS -------#}
+{#            {{ include ('@App/Layout/critical-css.html.twig', {}, withContext = false)}}#}
+
+            {#------- Deferred JS -------#}
+{#            <script src="{{ asset('js/scripts.js') }}" defer="defer"></script>#}
+{#            <script src="{{ asset('bundles/webfactoryembed/dist/embed.js') }}" defer="defer"></script>#}
+
+
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="page__header page-header">
+                <a href="/">Optik Dumm</a>
+                <nav aria-label="Hauptnavigation" class="main-nav">
+{#                    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}#}
+                    {% set mainNavPages = collections.all | eleventyNavigation %}
+                    {% set mainNavItemClass = 'main-nav__item' %}
+                    <ul class="main-nav__list" role="list">
+                        {%- for entry in mainNavPages %}
+                            <li {% if entry.url == page.url %}aria-current="page" class="{{ mainNavItemClass }} {{ mainNavItemClass ~ '--active' }}"{% else %}{{ mainNavItemClass }}{% endif %}>
+                                <a class="main-nav__text" href="{{ entry.url }}">{{ entry.title }}</a>
+                            </li>
+                        {%- endfor %}
+                    </ul>
+                </nav>
+            </header>
+            <main class="page__main page-main">
+                <div class="page-main__hero hero">
+                    <img alt=""
+                         class="hero__image"
+                         eleventy:formats="webp"
+                         eleventy:widths="320, 640, 1280"
+                         loading="lazy"
+                         sizes="320px, 640px, 1280px"
+                         src="{{ heroImgSrc }}" />
+                </div>
+                <div class="page-main__content">
+                    {{ content | safe }}
+                </div>
+            </main>
+            <footer class="page__footer page-footer"></footer>
+        </div>
+    </body>
+</html>
