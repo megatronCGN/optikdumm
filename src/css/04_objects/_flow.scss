@@ -1,0 +1,5 @@
+@use "../01_tools" as tools;
+
+.flow {
+    @include tools.flow;
+}

@@ -1,6 +1,30 @@
 @use "../00_settings" as settings;
 @use "../01_tools" as tools;
 
+.hero {
+    display: grid;
+    grid-template-columns: var(--layout-margin) auto 1fr var(--layout-margin);
+    grid-template-rows: 1fr min-content;
+}
+
 .hero__image {
+    width: 100%;
+    max-width: none;
     object-fit: cover;
+
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+.hero__content {
+    grid-column: 2;
+    grid-row: 2;
+
+    padding: var(--space-m-l);
+    background-color: deeppink;
+    transform: translate(calc(var(--space-m-l) * -1), calc(var(--space-m-l) * -1));
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m-l);
+    font-size: var(--step--1);
 }

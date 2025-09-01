@@ -1,0 +1,17 @@
+@use "../01_tools/headings" as headings;
+
+h1 {
+    @include headings.h1;
+}
+
+h2 {
+    @include headings.h2;
+}
+
+h3 {
+    @include headings.h3;
+}
+
+h4 {
+    @include headings.h4;
+}

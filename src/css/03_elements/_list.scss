@@ -1,0 +1,10 @@
+ul[role=list] {
+
+    padding-inline-start: 0;
+
+    li {
+        &::marker {
+            color: transparent;
+        }
+    }
+}

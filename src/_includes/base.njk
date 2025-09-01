@@ -1,12 +1,12 @@
 ---
 title: Startseite
 heroImgSrc: /img/hero.png
+heroContent: ''
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de" class="no-js">
     <head>
-        <head>
             {#
             Wir folgen den Empfehlungen von Harry Roberts (@csswizardry) aus seinem Talk "Get your <head> straight"
             (https://www.youtube.com/watch?v=MHyAOZ45vnU) für die Reihenfolge von head Elementen:
@@ -33,6 +33,9 @@ heroImgSrc: /img/hero.png
             <link rel="stylesheet" href="/css/style.css">
 
             {#------- Critical CSS -------#}
+            <style>
+                {% include 'critical.css' %}
+            </style>
 {#            {{ include ('@App/Layout/critical-css.html.twig', {}, withContext = false)}}#}
 
             {#------- Deferred JS -------#}
@@ -43,11 +46,10 @@ heroImgSrc: /img/hero.png
     </head>
 
     <body>
-        <div class="page">
+        <div class="page theme-default">
             <header class="page__header page-header">
-                <a href="/">Optik Dumm</a>
+                <a href="/" class="page-header__logo"><img class="page-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/></a>
                 <nav aria-label="Hauptnavigation" class="main-nav">
-{#                    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}#}
                     {% set mainNavPages = collections.all | eleventyNavigation %}
                     {% set mainNavItemClass = 'main-nav__item' %}
                     <ul class="main-nav__list" role="list">
@@ -58,8 +60,9 @@ heroImgSrc: /img/hero.png
                         {%- endfor %}
                     </ul>
                 </nav>
+                <a class="page-header__phone" href="tel:+49221551166">0221.551166</a>
             </header>
-            <main class="page__main page-main">
+            <main class="page__main page-main flow">
                 <div class="page-main__hero hero">
                     <img alt=""
                          class="hero__image"
@@ -68,12 +71,28 @@ heroImgSrc: /img/hero.png
                          loading="lazy"
                          sizes="320px, 640px, 1280px"
                          src="{{ heroImgSrc }}" />
+                    <div class="hero__content">
+                        {{ heroContent|safe }}
+                    </div>
                 </div>
-                <div class="page-main__content">
+                <div class="page-main__content flow">
                     {{ content | safe }}
                 </div>
             </main>
-            <footer class="page__footer page-footer"></footer>
+            <footer class="page__footer page-footer">
+                <div class="page-footer__content">
+                    <img class="page-footer-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/>
+                    <div>
+                        <p><span>Kontakt</span><br/>
+                            Iltisstraße 9<br/>
+                            50825 Köln<br/>
+                            Telefon 0221.551166<br>
+                            <a href="/">Optik Dumm auf Google Maps</a>
+                        </p>
+                        <p><span>Öffnungszeiten</span><br/>Mo, Di, Do, Fr<br/>09.00 bis 13.00 Uhr / 15.00 bis 18.30 Uhr<br/>Mi 09.00 bis 13.00 Uhr<br/>Sa 10.00 bis 14.00 Uhr</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>

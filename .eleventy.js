@@ -7,12 +7,10 @@ export default function (eleventyConfig) {
     // Input directory: src
     // Output directory: _site
 
-    // The following copies all files in `src`-folder to `_site`
-    eleventyConfig.addPassthroughCopy({"src/img/": 'img'});
+    eleventyConfig.addPassthroughCopy('src/img/*.svg');
+    eleventyConfig.addPassthroughCopy('src/fonts');
 
     eleventyConfig.addTemplateFormats("scss");
-
-    // Creates the extension for use
     eleventyConfig.addExtension("scss", {
         outputFileExtension: "css",
 

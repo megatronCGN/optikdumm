@@ -1,0 +1,24 @@
+.theme-default {
+    --color-foreground: var(--color-grey-600);
+    --color-foreground-inverted: var(--color-grey-100);
+    --color-foreground-muted: var(--color-brown-400);
+
+    --color-background: var(--color-grey-100);
+    --color-background-inverted: var(--color-grey-600);
+
+    /* Link */
+    --link-color-foreground-idle: var(--theme-accent-color-400);
+    --link-color-foreground-hover: var(--color-grey-400);
+
+    /* Button */
+    --button-color-foreground-idle: var(--color-foreground);
+
+    --button-color-border-idle: var(--button-color-foreground-idle);
+    --button-color-outline: var(--button-color-foreground-idle);
+
+    --button-color-foreground-hover: var(--color-foreground-inverted);
+    --button-color-background-hover: var(--color-background-inverted);
+
+    --button-text-decoration-line-idle: none;
+    --button-text-decoration-line-hover: underline;
+}

@@ -1,0 +1,5 @@
+@use '../01_tools' as tools;
+
+a:not([class]) {
+    @include tools.link;
+}

@@ -1,0 +1,42 @@
+@mixin link() {
+    --_link-color-foreground-idle: var(--link-color-foreground-idle, var(--color-foreground));
+    --_link-color-foreground-hover: var(--link-color-foreground-hover, var(--color-foreground-muted));
+    --_link-color-foreground-focus: var(--link-color-foreground-focus, var(--color-foreground-muted));
+
+    --_link-text-decoration-line-idle: var(--link-text-decoration-line-idle, underline);
+    --_link-text-decoration-line-hover: var(--link-text-decoration-line-hover, none);
+    --_link-text-decoration-line-focus: var(--link-text-decoration-line-focus, none);
+
+    --_link-line-height: var(--link-line-height, var(--line-height-300));
+    --_link-text-decoration-thickness: var(--text-decoration-thickness);
+    --_link-text-underline-offset: var(--link-text-underline-offset, var(--text-underline-offset-100));
+
+    --_link-color-outline: var(--link-color-outline, var(--_link-color-foreground-focus));
+
+    color: var(--_link-color-foreground-idle);
+    font-weight: inherit;
+    line-height: var(--_link-line-height);
+    text-decoration-thickness: var(--_link-text-decoration-thickness);
+    text-decoration-skip-ink: auto;
+    text-underline-offset: var(--_link-text-underline-offset);
+    text-decoration-line: var(--_link-text-decoration-line-idle);
+
+    &:hover {
+        color: var(--_link-color-foreground-hover);
+        text-decoration-line: var(--_link-text-decoration-line-hover);
+    }
+
+    &:focus-visible {
+        color: var(--_link-color-foreground-focus);
+        text-decoration-line: var(--_link-text-decoration-line-focus);
+        outline: var(--_link-color-outline) solid var(--focus-ring-width);
+        outline-offset: var(--focus-ring-offset);
+    }
+}
+
+@mixin link-interaction() {
+    @include link;
+
+    --link-text-decoration-line-idle: none;
+    --link-text-decoration-line-hover: underline;
+}

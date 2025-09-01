@@ -1,0 +1,38 @@
+@use "../00_settings" as settings;
+
+@mixin base() {
+    font-weight: normal;
+    line-height: var(--line-height-250);
+
+    &:target {
+        scroll-margin: var(--flow-space);
+    }
+}
+
+@mixin h1() {
+    @include base;
+
+    font-size: var(--step-5);
+    letter-spacing: var(--letter-spacing-300);
+}
+
+@mixin h2() {
+    @include base;
+
+    font-size: var(--step-4);
+    letter-spacing: var(--letter-spacing-300);
+}
+
+@mixin h3() {
+    @include base;
+
+    font-size: var(--step-3);
+    letter-spacing: var(--letter-spacing-400);
+}
+
+@mixin h4() {
+    @include base;
+
+    font-size: var(--step-2);
+    line-height: var(--line-height-300);
+}

@@ -13,6 +13,33 @@
     @include tools.layout__wide-content;
 }
 
+.page-header {
+    padding-block: var(--space-m);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-m);
+}
+
+.page-header__logo {
+    @include tools.link-interaction;
+
+    align-self: center;
+    margin-inline-end: auto;
+    font-weight: bold;
+}
+
+.page-logo {
+    width: auto;
+    height: var(--space-m-l);
+}
+
+.page-header__phone {
+    @include tools.link-interaction;
+
+    font-size: var(--step--1);
+}
+
 .page__main {
     @include tools.layout__full-bleed;
     @include tools.layout-grid;
@@ -24,4 +51,33 @@
 
 .page-main__content {
     @include tools.layout__wide-content;
+}
+
+.page-footer {
+    @include tools.layout__full-bleed;
+    @include tools.layout-grid;
+
+    margin-block-start: var(--space-l-xl);
+    padding-block: var(--space-l-xl);
+    background-color: var(--color-grey-300);
+}
+
+.page-footer__content {
+    @include tools.layout__wide-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m-l);
+    font-size: var(--step--1);
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-m-l);
+    }
+}
+
+.page-footer-logo {
+    height: var(--space-m-l);
+    margin-inline-end: auto;
 }

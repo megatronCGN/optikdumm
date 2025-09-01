@@ -1,0 +1,17 @@
+@use '../01_tools' as tools;
+
+.h1 {
+    @include tools.h1;
+}
+
+.h2 {
+    @include tools.h2;
+}
+
+.h3 {
+    @include tools.h3;
+}
+
+.h4 {
+    @include tools.h4;
+}

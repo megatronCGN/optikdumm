@@ -1,0 +1,6 @@
+@mixin flow() {
+
+    > *:not(.visually-hidden) + *:not(.visually-hidden) {
+        margin-block-start: var(--flow-space);
+    }
+}
