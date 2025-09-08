@@ -1,0 +1,27 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.card-grid {
+    --_card-grid-gap: var(--card-grid-gap, var(--space-xl));
+    --_card-grid-items: var(--card-grid-items, 1);
+
+    display: flex;
+    gap: var(--_card-grid-gap);
+    flex-wrap: wrap;
+    justify-content: center;
+
+    container-type: inline-size;
+}
+
+.card-grid > * {
+    flex: 100% 0 0;
+    max-width: calc(100% / var(--_card-grid-items) - (var(--_card-grid-gap) * (var(--_card-grid-items) - 1)/var(--_card-grid-items)));
+
+    @container (width >= 600px) {
+        --_card-grid-items: 2;
+    }
+
+    @container (width >= 900px) {
+        --_card-grid-items: 3;
+    }
+}

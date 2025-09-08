@@ -12,4 +12,5 @@ $sizes-map: (
         'max': 'max-content',
         'min': 'min-content',
         'none': 'none',
+        'paragraph-max': var(--paragraph-max-width)
 )

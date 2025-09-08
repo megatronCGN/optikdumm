@@ -1,17 +1,21 @@
 @use "../01_tools/headings" as headings;
 
-h1 {
+h1:not([class]) {
     @include headings.h1;
 }
 
-h2 {
+h2:not([class]) {
     @include headings.h2;
 }
 
-h3 {
+h3:not([class]) {
     @include headings.h3;
 }
 
-h4 {
+h4:not([class]) {
     @include headings.h4;
+}
+
+h5:not([class]) {
+    @include headings.h5;
 }

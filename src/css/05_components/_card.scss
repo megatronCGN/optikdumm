@@ -1,0 +1,35 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.card {
+    --_card-padding: var(--card-padding, var(--space-m));
+    --_card-color-background: var(--card-color-background, var(--color-background));
+    --_card-color-shadow: var(--card-shadow-color, hsl(198deg 11% 35% / var(--alpha, 12.5%)));
+
+    border: 1px solid var(--color-foreground-muted);
+    padding: var(--_card-padding);
+    background-color: var(--_card-color-background);
+
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+            1px 2px 2px var(--_card-color-shadow),
+            2px 4px 4px var(--_card-color-shadow),
+            4px 8px 8px var(--_card-color-shadow),
+            8px 16px 16px var(--_card-color-shadow),
+            16px 32px 32px var(--_card-color-shadow);
+
+    &:has(.card__link) {
+        position: relative;
+    }
+}
+
+.card__link {
+    @include tools.link-interaction;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0 0 0 0;
+    }
+}

@@ -13,6 +13,7 @@
     @include base;
 
     font-size: var(--step-5);
+    font-weight: var(--weight-light);
     letter-spacing: var(--letter-spacing-300);
 }
 
@@ -35,4 +36,9 @@
 
     font-size: var(--step-2);
     line-height: var(--line-height-300);
+}
+
+@mixin h5() {
+    font-weight: 900;
+    font-size: var(--step-0);
 }

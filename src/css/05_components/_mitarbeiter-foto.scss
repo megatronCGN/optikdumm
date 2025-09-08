@@ -1,0 +1,15 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.mitarbeiter-foto {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow:
+    0 0 0 2px white,
+    0 0 0 3px var(--color-foreground-muted);
+    overflow: hidden;
+}
+
+.mitarbeiter-foto__img {
+    transform: scale(1.75) translateY(12.5%);
+}

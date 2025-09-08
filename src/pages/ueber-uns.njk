@@ -1,4 +1,55 @@
 ---
+layout: base.njk
+title: Über uns
 eleventyNavigation:
     key: Über uns
+heroContent: '
+    <h1>Über uns</h1>
+'
 ---
+
+<div class="layout">
+    <section class="layout__wide-content flow flow-l">
+        <p class="max-width-paragraph-max">Wir sind seit über 40 Jahren Ihr Augenoptik-Fachgeschäft in Köln-Ehrenfeld.
+            Seit Anfang 2015 in zweiter Generation ein traditioneller Handwerksbetrieb, der Ihre Brillen vor Ort in der eigenen Werkstatt fertigt, repariert und optimal anpasst.</p>
+            <div class="grid gap-xl" style="grid-template-columns: repeat(auto-fill, 180px);">
+                {% for mitarbeiter in [
+                    {
+                        name: 'Markus Dumm',
+                        details: 'staatlich geprüfter Augenoptiker und Augenoptikermeister',
+                        img: 'md'
+                    },
+                    {
+                        name: 'Ralf Dumm',
+                        details: 'staatlich geprüfter Augenoptiker und Augenoptikermeister',
+                        img: 'rd'
+                    },
+                    {
+                        name: 'Milena Neu',
+                        details: 'Augenoptikermeisterin und Optometristin',
+                        img: 'mn'
+                    },
+                    {
+                        name: 'Claudia Langen',
+                        details: 'staatlich geprüfte Augenoptikerin und Augenoptikermeisterin',
+                        img: 'cl'
+                    }
+                ] %}
+                    <div class="text-align-center">
+                        <div class="mitarbeiter-foto">
+                            <img class="mitarbeiter-foto__img"
+                                 alt=""
+                                 eleventy:formats="webp"
+                                 eleventy:widths="640"
+                                 loading="lazy"
+                                 sizes="320px, 640px"
+                                 src="/img/{{ mitarbeiter.img }}.png"
+                            />
+                        </div>
+                        <p class="h5 text-300 m-t-xs">{{ mitarbeiter.name }}</p>
+                        <p class="text-300 hyphens-auto">{{ mitarbeiter.details }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+    </section>
+</div>

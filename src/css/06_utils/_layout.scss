@@ -1,4 +1,4 @@
-@use 'svala/scss/generator' as svala;
+@use '../../../node_modules/svala/scss/generator' as svala;
 
 @include svala.generator((
     'USE_VALUES': (
