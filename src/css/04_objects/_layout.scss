@@ -1,0 +1,17 @@
+@use "../01_tools" as tools;
+
+.layout {
+    @include tools.layout-grid;
+}
+
+.layout__full-bleed {
+    @include tools.layout__full-bleed;
+}
+
+.layout__wide-content {
+    @include tools.layout__wide-content;
+}
+
+.layout__content {
+    @include tools.layout__content;
+}

@@ -1,0 +1,69 @@
+@use '../../../node_modules/svala/scss/generator' as svala;
+@use '../00_settings/svala' as svala-settings;
+@use '../00_settings/fluid-space' as spaces;
+@use '../00_settings/sizes' as sizes;
+
+@include svala.generator((
+    'm': (
+        'property': 'margin',
+        'axes': svala-settings.$default-axes,
+        'values': spaces.$spaces-map,
+        'responsive': true,
+        'important': true
+    ),
+    'p': (
+        'property': 'padding',
+        'axes': svala-settings.$default-axes,
+        'values': spaces.$spaces-map,
+        'responsive': true,
+        'important': true
+    ),
+    'flow': (
+        'property': '--flow-space',
+        'values': spaces.$spaces-map,
+        'responsive': true,
+        'important': true,
+    ),
+));
+
+@include svala.generator((
+    'column-gap': (
+        'property': 'column-gap',
+        'values': spaces.$spaces-map,
+        'responsive': true
+    ),
+    'row-gap': (
+        'property': 'row-gap',
+        'values': spaces.$spaces-map,
+        'responsive': true
+    ),
+    'gap': (
+        'property': 'gap',
+        'values': spaces.$spaces-map,
+    ),
+    'width': (
+        'property': 'width',
+        'values': sizes.$sizes-map,
+        'responsive': true
+    ),
+    'max-width': (
+        'property': 'max-width',
+        'values': sizes.$sizes-map,
+        'responsive': true
+    ),
+    'min-width': (
+        'property': 'min-width',
+        'values': sizes.$sizes-map,
+        'responsive': true
+    ),
+    'max-height': (
+        'property': 'max-height',
+        'values': sizes.$sizes-map,
+        'responsive': true
+    ),
+    'min-height': (
+        'property': 'min-height',
+        'values': sizes.$sizes-map,
+        'responsive': true
+    ),
+));

@@ -1,6 +1,5 @@
 ---
-title: Startseite
-heroImgSrc: /img/hero.png
+#heroImgSrc: /img/hero.png
 heroContent: ''
 ---
 
@@ -48,7 +47,7 @@ heroContent: ''
     <body>
         <div class="page theme-default">
             <header class="page__header page-header">
-                <a href="/" class="page-header__logo"><img class="page-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/></a>
+                <a href="/" class="page-header__logo">{% include 'logo.svg' %}</a>
                 <nav aria-label="Hauptnavigation" class="main-nav">
                     {% set mainNavPages = collections.all | eleventyNavigation %}
                     {% set mainNavItemClass = 'main-nav__item' %}
@@ -63,7 +62,8 @@ heroContent: ''
                 <a class="page-header__phone" href="tel:+49221551166">0221.551166</a>
             </header>
             <main class="page__main page-main flow">
-                <div class="page-main__hero hero">
+                <div class="page-main__hero hero pattern-boxes" style="--pattern-multiplier: .5">
+                    {% if heroImgSrc %}
                     <img alt=""
                          class="hero__image"
                          eleventy:formats="webp"
@@ -71,6 +71,7 @@ heroContent: ''
                          loading="lazy"
                          sizes="320px, 640px, 1280px"
                          src="{{ heroImgSrc }}" />
+                    {% endif %}
                     <div class="hero__content">
                         {{ heroContent|safe }}
                     </div>
@@ -79,7 +80,7 @@ heroContent: ''
                     {{ content | safe }}
                 </div>
             </main>
-            <footer class="page__footer page-footer">
+            <footer class="page__footer page-footer" style="margin-block-start: var(--space-3xl)">
                 <div class="page-footer__content">
                     <img class="page-footer-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/>
                     <div>

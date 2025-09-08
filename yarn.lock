@@ -1291,6 +1291,11 @@ strip-bom-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom-string/-/strip-bom-string-1.0.0.tgz#e5211e9224369fbb81d633a2f00044dc8cedad92"
   integrity sha512-uCC2VHvQRYu+lMh4My/sFNmF2klFymLX1wHJeXnbEJERpV/ZsVuonzerjfrGpIGF7LBVa1O7i9kjiWvJiFck8g==
 
+svala@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/svala/-/svala-1.0.1.tgz#ca8c96d50a5aa74fc220b305ea5460698eb202db"
+  integrity sha512-as1szot8z4AHjil7ia0sJ+J2ZIm+78foYqzlcUn2WUcvt/eMKCvTRuG88cCgiFA+5BeZNx7a6gHqe2Cxk+5EQg==
+
 tinyglobby@^0.2.14:
   version "0.2.14"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.14.tgz#5280b0cf3f972b050e74ae88406c0a6a58f4079d"

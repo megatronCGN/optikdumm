@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use '../../../node_modules/svala/scss/config/default-options' as svala;
+@use 'breakpoints' as breakpoints;
+
+// Braucht kein globales @forward wegen @use in 06_utils.scss
+
+$svala-options: map.merge(svala.$svala-default-options, (
+    'breakpoints': breakpoints.$breakpoints-map,
+        'prefix': '',
+        'axis-modifier-divider': '-',
+        'breakpoint-modifier-divider': '\\:',
+        'state-modifier-divider': '\\:',
+        'responsive-mode': 'leading',
+        'stateful-mode': 'leading',
+));
+
+$default-axes: (
+    't': 'top',
+    'r': 'right',
+    'b': 'bottom',
+    'l': 'left',
+    'h': ('right', 'left'),
+    'v': ('top', 'bottom')
+);

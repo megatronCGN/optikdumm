@@ -5,5 +5,5 @@
     --layout-margin: max(var(--layout-gutter), calc((100dvw - var(--layout-max-width)) / 2 + var(--layout-gutter)));
     --layout-single-column-width: calc((100dvw - var(--layout-margin)) / var(--layout-columns));
 
-    --flow-space: var(--space-s-m);
+    --flow-space: var(--space-m);
 }

@@ -1,0 +1,104 @@
+@use 'svala/scss/generator' as svala;
+
+@include svala.generator((
+    'USE_VALUES': (
+        'property': 'display',
+        'values': (
+            'block': 'block',
+            'inline-block': 'inline-block',
+            'inline': 'inline',
+            'list-item': 'list-item',
+            'contents': 'contents',
+            'flex': 'flex',
+            'inline-flex': 'inline-flex',
+            'table': 'table',
+            'inline-table': 'inline-table',
+            'table-cell': 'table-cell',
+            'flow-root': 'flow-root',
+            'grid': 'grid',
+            'inline-grid': 'inline-grid',
+            'hidden': 'none',
+        ),
+        'responsive': 'true',
+        'important': 'true'
+    ),
+));
+@include svala.generator((
+    'USE_VALUES': (
+        'property': 'position',
+        'values': absolute relative,
+        'responsive': 'true'
+    ),
+));
+
+// Flex
+@include svala.generator((
+    'items': (
+        'property': 'align-items',
+        'values': (
+            'baseline': 'baseline',
+            'start': 'start',
+            'flex-start': 'flex-start',
+            'end': 'end',
+            'flex-end': 'flex-end',
+            'center': 'center',
+            'stretch': 'stretch',
+            'normal': 'normal',
+        )
+    ),
+    'align-self': (
+        'property': 'align-self',
+        'values': (
+            'start': 'start',
+            'flex-start': 'flex-start',
+            'end': 'end',
+            'flex-end': 'flex-end',
+            'center': 'center',
+            'stretch': 'stretch',
+        ),
+            'responsive': 'true'
+    ),
+    'justify': (
+        'property': 'justify-content',
+        'values': (
+            'start': 'start',
+            'flex-start': 'flex-start',
+            'end': 'end',
+            'flex-end': 'flex-end',
+            'center': 'center',
+            'between': 'space-between',
+            'around': 'space-around',
+            'evenly': 'space-evenly',
+            'stretch': 'stretch',
+        ),
+            'responsive': 'true'
+    ),
+    'justify-self': (
+        'property': 'justify-self',
+        'values': (
+            'start': 'start',
+            'flex-start': 'flex-start',
+            'end': 'end',
+            'flex-end': 'flex-end',
+            'center': 'center',
+            'stretch': 'stretch',
+        ),
+            'responsive': 'true'
+    ),
+    'flex': (
+        'property': 'flex-wrap',
+        'values': (
+            'wrap': 'wrap',
+            'wrap-reverse': 'wrap-reverse',
+            'nowrap': 'nowrap',
+        ),
+        'responsive': 'true'
+    ),
+));
+
+@include svala.generator((
+    'flex': (
+        'property': 'flex-direction',
+        'values': row row-reverse column column-reverse
+    ),
+));

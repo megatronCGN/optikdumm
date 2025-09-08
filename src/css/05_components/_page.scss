@@ -32,6 +32,10 @@
 .page-logo {
     width: auto;
     height: var(--space-m-l);
+
+    path {
+        fill: var(--color-grey-400);
+    }
 }
 
 .page-header__phone {
@@ -50,7 +54,7 @@
 }
 
 .page-main__content {
-    @include tools.layout__wide-content;
+    @include tools.layout__full-bleed;
 }
 
 .page-footer {

@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use '../../../node_modules/svala/scss/generator' as svala;
+@use '../00_settings/typography' as typography;
+
+@include svala.generator((
+    'font': (
+        'property': 'font-weight',
+        'values': map.merge(typography.$font-weights-map, (
+            'inherit': 'inherit',
+        )),
+    ),
+    'whitespace': (
+        'property': 'white-space',
+        'values': (
+            'nowrap': 'nowrap'
+        ),
+    ),
+    'USE_VALUES': (
+        'property': 'text-decoration',
+        'values': (
+            'no-underline': 'none',
+            'underline': 'underline',
+            'line-through': 'line-through',
+        )
+    ),
+));
+
+@include svala.generator((
+    'text': (
+        'property': 'font-size',
+        'values': typography.$font-sizes-map,
+        'responsive': 'true',
+        'important': true
+    ),
+
+    'text-align': (
+        'property': 'text-align',
+        'values': (
+            'center': 'center',
+            'left': 'left',
+            'right': 'right',
+        ),
+        'responsive': 'true',
+    ),
+
+    'hyphens': (
+        'property': 'hyphens',
+        'values': (
+            'auto': 'auto',
+            'none': 'none'
+        ),
+        'responsive':true
+    ),
+));

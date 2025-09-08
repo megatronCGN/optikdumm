@@ -1,18 +1,188 @@
 ---
 layout: base.njk
 title: Startseite
-heroContent: "
-    <p><span>Kontakt</span><br/>Iltisstraße 9<br/> 50825 Köln<br/>Telefon 0221.551166</p>
-    <p><span>Öffnungszeiten</span><br/>Mo, Di, Do, Fr<br/>09.00 bis 13.00 Uhr / 15.00 bis 18.30 Uhr<br/>Mi 09.00 bis 13.00 Uhr<br/>Sa 10.00 bis 14.00 Uhr</p>
-"
+heroContent: '
+<h1 style="font-weight: 100">Optik Dumm – <br>Ihr zuverlässiger Optiker<br> im Veedel.</h1>
+<img alt="Retro Sonnenbrille"
+     class=""
+     eleventy:formats="webp"
+     eleventy:widths="1280"
+     loading="lazy"
+     sizes="320px, 640px, 1280px"
+     src="/img/brille.png"
+     style="height: auto; margin-block-end: calc(var(--space-xl) * -1); max-width: 600px;"
+/>
+'
 ---
-<div class="flow">
-    <h1>Willkommen bei Optik Dumm</h1>
+<div class="flow-xl layout" style="margin-block-start: var(--space-xl);">
+    <div class="layout__wide-content" style="margin-inline-start: auto; max-width: 65ch;">
+        <p>Optik Dumm in Neuehrefeld ist so bunt und vielfältig wie Köln selbst. Unser engagiertes Team ist Ihr kompetenter Ansprechpartner für alle Belange rund um das Thema „besser sehen“, wobei die Qualität unserer Produkte und die Zufriedenheit unserer Kunden an oberster Stelle stehen. Wir glauben, dass zufriedene Kunden der Schlüssel zu unserem Erfolg sind, und legen besonderen Wert auf die Präzision bei der Augenglasbestimmung. Durch sorgfältige und professionelle Arbeit gewährleisten wir die bestmögliche Qualität. Besuchen Sie uns gerne in unserem Laden, um in einem persönlichen Gespräch Ihre Bedürfnisse und Wünsche zu besprechen.</p>
+    </div>
+    <div class="layout__full-bleed">
+        <img alt="Das Team von Optik Dumm"
+             class=""
+             eleventy:formats="webp"
+             eleventy:widths="1600"
+             loading="lazy"
+             sizes="320px, 640px, 1280px, 1600px"
+             src="/img/team.png"
+             style="height: auto; object-fit: cover; max-width: none; width: 100%;"
+        />
+    </div>
+    <section class="layout__wide-content flow-l">
+        <h2 style="font-weight: 300; font-size: var(--step-5)">Unsere Leistungen</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 30ch));
+            gap: var(--space-xl);
+            font-size: var(--step--1);
+        ">
+            <p>
+                <span style="font-weight: 900">Sehtest</span><br>
+                Einmal im Jahr sollten Sie einen Sehtest bei uns oder Ihrem Augenarzt machen lassen, denn eine Verschlechterung der Sehleistung verläuft häufig schleichend und wird meist erst spät wahrgenommen.
+            </p>
 
-    <p>Optik Dumm aus Köln Neuehrefeld ist so bunt und vielfältig wie Köln. Ob modebewusst, jung geblieben, ausgefallen oder familiär und preisbewusst, das Team von Optik Dumm ist Ihr professioneller Ansprechpartner rund um das Thema „besser sehen“. Bei uns stehen die Qualität der Produkte und die Zufriedenheit unserer Kunden immer an erster Stelle.</p>
+            <p>
+                <span style="font-weight: 900">Qualitäts-Garantie</span><br>
+                Auf alle Brillen erhalten Sie eine Qualitäts-Garantie von 2 Jahren.
+            </p>
+            <p>
+                <span style="font-weight: 900">Verträglichkeits-Garantie</span><br>
+                Sie erhalten eine 6-monatige Verträglichkeits-Garantie auf alle von uns verarbeiteten Brillengläser.
+            </p>
 
-    <p>Unsere Philosophie: stets zufriedene Kunden, denn wenn Sie es sind, sind wir es auch. Besonderen Wert legen wir auf die Qualität der Augenglasbestimmung. Wir sind stets bemüht durch gründliche und seriöse Arbeit dem Kunden beste Qualität zu liefern.</p>
+            <p>
+                <span style="font-weight: 900">Ultraschallreinigung</span><br>
+                Auch bei sorgfältiger Reinigung Ihrer Brille mit einem Mikrofasertuch bleiben Verschmutzungen in Ecken, Kanten und Rillen bestehen. Deshalb bieten wir Ihnen eine kostenfreie Ultraschall-Reinigung an. Schonend und gründlich.
+            </p>
 
-    <p>Unser Hauptaugenmerk liegt in der Beratung unserer Kunden.</p>
+            <p>
+                <span style="font-weight: 900">Brillen-Check</span><br>
+                Bringen Sie uns Ihre Brille zum Brillen-Check. Anschließend erhalten Sie Ihre Brille Ultraschall gereinigt und generalüberholt zurück.
+            </p>
+
+            <p>
+                <span style="font-weight: 900">Kontaktlinsen-Probetragen</span><br>
+                Sie wollten schon immer einmal Kontaktlinsen ausprobieren? Kein Problem – vereinbaren Sie einfach einen Termin und lassen Sie sich von uns unverbindlich Kontaktlinsen aufsetzten.
+            </p>
+            <p>
+                <span style="font-weight: 900">Unsere Werkstatt</span><br>
+                Um eine optimale Verglasung Ihrer Brille sicher zu stellen, garantieren wir noch echtes Handwerk aus eigener Hand. Dabei kommt es auf Präzision, Geduld und natürlich Geschick an.
+            </p>
+        </div>
+    </section>
+    <section class="layout__full-bleed">
+        <div class="layout pattern-boxes flow-l" style="padding-block: var(--space-xl)">
+            <div class="layout__wide-content" style="justify-self: end;">
+                <h2 style="font-weight: 300; font-size: var(--step-5);">Unsere Produkte</h2>
+            </div>
+            <div class="layout__wide-content">
+                <div style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        ">
+                {% for produkt in [
+                    {
+                        name: 'Brillen',
+                        beschreibung: 'Wir bieten eine große Auswahl an hochwertigen Designerbrillen aus den aktuellsten Kollektionen regionaler und internationaler Marken sowie tolle Komplettpreisangebote.',
+                        img: ''
+                    },
+                    {
+                        name: 'Sonnenbrillen',
+                        beschreibung: 'Unsere Sonnenbrillen sind echte Hingucker. Bei uns können Sie eine Vielzahl an Sonnenbrillenmodellen endecken.',
+                        img: ''
+                    },
+                    {
+                        name: 'Kontaktlinsen',
+                        beschreibung: 'Kontaktlinsen sind die ideale Ergänzung oder Alternative zur Brille. Sie garantieren in fast allen Lebenslagen optimales Sehen ohne Beeinträchtigung.',
+                        img: ''
+                    }
+                ] %}
+                    <article style="
+                        --shadow-color: hsl(198deg 11% 35% / var(--alpha, 12.5%));
+
+                        border: 1px solid var(--color-brown-400);
+                        padding: var(--space-m);
+                        background-color: white;
+                        display: flex;
+                        flex-direction: column;
+                        box-shadow: 1px 2px 2px var(--shadow-color), 2px 4px 4px var(--shadow-color), 4px 8px 8px var(--shadow-color), 8px 16px 16px var(--shadow-color), 16px 32px 32px var(--shadow-color);
+                        ">
+                        <img alt="Retro Sonnenbrille"
+                             class=""
+                             eleventy:formats="webp"
+                             eleventy:widths="1280"
+                             loading="lazy"
+                             sizes="320px, 640px, 1280px"
+                             src="/img/brille.png"
+                             style="height: auto; margin-block-start: -2.5lh;"
+                        />
+                        <p style="font-weight: 900; margin-block-start: var(--space-m);">{{ produkt.name }}</p>
+                        <p style="margin-block-end: var(--space-m)">{{ produkt.beschreibung }}</p>
+                        <a href="" aria-hidden="true" style="display:inline-flex; margin-block-start: auto;">Mehr erfahren</a>
+                    </article>
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="layout__wide-content flow-l">
+        <h2 style="font-weight: 300; font-size: var(--step-5)">Über uns</h2>
+        <p style="max-width: 65ch;">Wir sind seit über 40 Jahren Ihr Augenoptik-Fachgeschäft in Köln-Ehrenfeld.
+            Seit Anfang 2015 in zweiter Generation ein traditioneller Handwerksbetrieb, der Ihre Brillen vor Ort in der eigenen Werkstatt fertigt, repariert und optimal anpasst.</p>
+        <div class="layout__wide-content">
+            <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 150px);
+};
+            gap: var(--space-xl);
+        ">
+                {% for mitarbeiter in [
+                    {
+                        name: 'Markus Dumm',
+                        details: 'staatlich geprüfter Augenoptiker und Augenoptikermeister',
+                        img: 'md'
+                    },
+                    {
+                        name: 'Ralf Dumm',
+                        details: 'staatlich geprüfter Augenoptiker und Augenoptikermeister',
+                        img: 'rd'
+                    },
+                    {
+                        name: 'Milena Neu',
+                        details: 'Augenoptikermeisterin und Optometristin',
+                        img: 'mn'
+                    },
+                    {
+                        name: 'Claudia Langen',
+                        details: 'staatlich geprüfter Augenoptiker und Augenoptikermeister',
+                        img: 'cl'
+                    },
+                    {
+                        name: 'Jan Vogel',
+                        details: 'Auszubildener',
+                        img: 'jv'
+                    }
+                ] %}
+                    <div style="text-align: center">
+                        <div style="overflow: hidden; aspect-ratio: 1; border-radius: 50%; box-shadow: 0 0 0 2px white, 0 0 0 3px var(--color-brown-400);">
+                            <img alt="Das Team von Optik Dumm"
+                                 class=""
+                                 eleventy:formats="webp"
+                                 eleventy:widths="640"
+                                 loading="lazy"
+                                 sizes="320px, 640px"
+                                 src="/img/{{ mitarbeiter.img }}.png"
+                                 style="height: auto;transform: scale(1.75) translateY(12.5%);"
+                            />
+                        </div>
+                        <p style="font-size: var(--step--1); font-weight: 900; margin-block-start: .5lh;">{{ mitarbeiter.name }}</p>
+                        <p style="font-size: var(--step--1);">{{ mitarbeiter.details }}</p>
+
+                    </div>
+                {% endfor %}
+            </div>
+    </section>
 </div>
 

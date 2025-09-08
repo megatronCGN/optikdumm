@@ -1,0 +1,25 @@
+@use '../../../node_modules/svala/scss/generator' as svala;
+
+@include svala.generator((
+    'USE_VALUES': (
+        'property': 'display',
+        'values': (
+            'block': 'block',
+            'inline-block': 'inline-block',
+            'inline': 'inline',
+            'list-item': 'list-item',
+            'contents': 'contents',
+            'flex': 'flex',
+            'inline-flex': 'inline-flex',
+            'table': 'table',
+            'inline-table': 'inline-table',
+            'table-cell': 'table-cell',
+            'flow-root': 'flow-root',
+            'grid': 'grid',
+            'inline-grid': 'inline-grid',
+            'hidden': 'none',
+        ),
+        'responsive': 'true',
+        'important': 'true'
+    ),
+));

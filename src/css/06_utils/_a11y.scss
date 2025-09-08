@@ -1,0 +1,5 @@
+@use '../01_tools' as tools;
+
+.visually-hidden {
+    @include tools.is-visually-hidden;
+}

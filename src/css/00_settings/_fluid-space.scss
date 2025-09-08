@@ -21,3 +21,14 @@
     --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
     --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
 }
+
+$spaces-map: (
+    2xs: var(--space-2xs),
+    xs: var(--space-xs),
+    s: var(--space-s),
+    m: var(--space-m),
+    l: var(--space-l),
+    xl: var(--space-xl),
+    2xl: var(--space-2xl),
+    3xl: var(--space-s3xl),
+)

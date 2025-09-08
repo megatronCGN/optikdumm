@@ -8,6 +8,7 @@
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.4",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "svala": "^1.0.1"
   }
 }

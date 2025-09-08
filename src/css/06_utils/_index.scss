@@ -1,0 +1,6 @@
+@use '../00_settings/_svala' as svala-config;
+@use '../../../node_modules/svala/scss/generator' as svala with ($svala-options: svala-config.$svala-options);
+
+@use 'display';
+@use 'space';
+@use 'typography';
