@@ -1,5 +1,21 @@
 @use "../01_tools" as tools;
 
+.flow-s {
+    @include tools.flow(var(--space-s));
+}
+
 .flow {
     @include tools.flow;
+}
+
+.flow-l {
+    @include tools.flow(var(--space-l));
+}
+
+.flow-xl {
+    @include tools.flow(var(--space-xl));
+}
+
+.flow-2xl {
+    @include tools.flow(var(--space-2xl));
 }
