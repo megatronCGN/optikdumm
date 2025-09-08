@@ -2,7 +2,7 @@
 @use "../01_tools" as tools;
 
 .main-nav {
-    margin-inline-end: auto;
+    margin-inline-end: var(--space-m);
 }
 
 .main-nav__list {
@@ -13,10 +13,6 @@
 
 .main-nav__text {
     @include tools.link-interaction;
-
-    font-size: var(--step--1);
-    text-underline-offset: .35em;
-    text-decoration-thickness: .1em;
 
     .main-nav__item--active & {
         font-weight: bold;

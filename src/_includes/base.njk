@@ -48,6 +48,7 @@ heroContent: ''
         <div class="page theme-default">
             <header class="page__header page-header">
                 <a href="/" class="page-header__logo">{% include 'logo.svg' %}</a>
+
                 <nav aria-label="Hauptnavigation" class="main-nav">
                     {% set mainNavPages = collections.all | eleventyNavigation %}
                     {% set mainNavItemClass = 'main-nav__item' %}
@@ -59,7 +60,7 @@ heroContent: ''
                         {%- endfor %}
                     </ul>
                 </nav>
-                <a class="page-header__phone" href="tel:+49221551166">0221.551166</a>
+                <a class="page-header__phone link-interaction" href="tel:+49221551166">0221.551166</a>
             </header>
             <main class="page__main page-main flow">
                 <div class="page-main__hero hero pattern-boxes" style="--pattern-multiplier: .5">

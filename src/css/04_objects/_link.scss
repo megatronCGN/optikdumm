@@ -1,0 +1,9 @@
+@use "../01_tools" as tools;
+
+.link {
+    @include tools.link;
+}
+
+.link-interaction {
+    @include tools.link-interaction;
+}

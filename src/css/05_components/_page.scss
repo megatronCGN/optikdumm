@@ -40,8 +40,6 @@
 
 .page-header__phone {
     @include tools.link-interaction;
-
-    font-size: var(--step--1);
 }
 
 .page__main {
