@@ -1,0 +1,41 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.marken {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+.marken__marke {
+    padding: var(--space-m);
+    margin-block-end: -1px;
+    margin-inline-end: -1px;
+
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-grey-100);
+    border: 1px solid var(--color-grey-300);
+
+    position: relative;
+    transition: transform 100ms cubic-bezier(1,0,0,1);
+
+    a {
+        height: 100%;
+    }
+
+    &:hover, &:focus-visible {
+        transform: scale(1.25);
+        z-index: 1;
+    }
+}
+
+.marken:hover,
+.marken:focus-within {
+
+    .marken__marke:not(:hover):not(:focus-visible) {
+        transform: scale(.875);
+    }
+}

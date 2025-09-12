@@ -127,5 +127,76 @@ heroContent: '
             </div>
         </div>
     </section>
+    <section class="layout__wide-content flow-l">
+        <h2 class="h1" id="Marken">Marken</h2>
+        <ul role="list" class="marken">
+            {% for logo in [
+                {
+                    name: 'Alfred Kerbs',
+                    img: 'alfredkerbs.png',
+                    url: 'https://www.alfredkerbs.com/'
+                },
+                {
+                    name: 'Andy Wolf',
+                    img: 'andywolf.svg',
+                    url: 'https://www.andy-wolf.com/'
+                },
+                {
+                    name: 'Annu',
+                    img: 'annu.svg',
+                    url: 'https://weareannu.com/de/'
+                },
+                {
+                    name: 'Atlant',
+                    img: 'atlant.svg',
+                    url: 'https://atlanteyewear.com/'
+                },
+                {
+                    name: 'Cazal',
+                    img: 'cazal.svg',
+                    url: 'https://www.cazal-eyewear.com/'
+                },
+                {
+                    name: 'Gigi Studios',
+                    img: 'gigistudios.svg',
+                    url: 'https://gigistudios.com/de-de'
+                },
+                {
+                    name: 'julbo',
+                    img: 'julbo.svg',
+                    url: 'https://www.julbo.com/de_de'
+                },
+                {
+                    name: 'Luno',
+                    img: 'luno.svg',
+                    url: 'https://lunor.com/'
+                },
+                {
+                    name: 'Manti Manti',
+                    img: 'mantimanti.svg',
+                    url: 'https://mantimanti.de/'
+                },
+                {
+                    name: 'Oscar Magnussen',
+                    img: 'oscarmagnussen.png',
+                    url: 'https://oscarmagnuson.com/'
+                },
+                {
+                    name: 'You Mawo',
+                    img: 'youmawo.png',
+                    url: 'https://www.youmawo.com/?lang=de'
+                }
+            ] %}
+                <li>
+                    <a class="marken__marke" href="{{ logo.url }}">
+                        <img
+                                alt="{{ logo.name }}"
+                                eleventy:formats="{{ logo.img.split('.')[1] }}"
+                                src="/img/marken/{{ logo.img }}">
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 </div>
 
