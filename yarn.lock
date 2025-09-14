@@ -1296,6 +1296,11 @@ svala@^1.0.1:
   resolved "https://registry.yarnpkg.com/svala/-/svala-1.0.1.tgz#ca8c96d50a5aa74fc220b305ea5460698eb202db"
   integrity sha512-as1szot8z4AHjil7ia0sJ+J2ZIm+78foYqzlcUn2WUcvt/eMKCvTRuG88cCgiFA+5BeZNx7a6gHqe2Cxk+5EQg==
 
+swiper@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-12.0.1.tgz#107c1d9e608360e669290a75ce1777947b3d5f07"
+  integrity sha512-Fi+gNw/tfc4hsGowQU5tRC/f1HFknkh4Vz8PaDI4JTinLUMTwhZyaovcH/va+iXq98BNUHN5ok0c2lEI82Fsgw==
+
 tinyglobby@^0.2.14:
   version "0.2.14"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.14.tgz#5280b0cf3f972b050e74ae88406c0a6a58f4079d"
