@@ -1,0 +1,28 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.elevator {
+    min-height: 75dvh;
+    display: grid;
+    grid-template-columns: var(--layout-margin) 1fr 0.618fr var(--layout-margin);
+    grid-template-rows: auto min-content min-content;
+    row-gap: var(--space-m);
+}
+
+.elevator__background {
+    grid-column: 1/-1;
+    grid-row: 1/3;
+}
+
+.elevator__text {
+    margin-block-start: var(--space-l);
+    grid-column: 2/4;
+    grid-row: 1;
+    align-self: end;
+}
+
+.elevator__swiper {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+    align-self: center;
+}

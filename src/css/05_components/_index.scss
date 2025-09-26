@@ -1,7 +1,11 @@
+@use "../../../node_modules/swiper/swiper.css";
+
 @use "card";
 @use "card-grid";
+@use "elevator";
 @use "page";
 @use "hero";
 @use "marken";
 @use "main-nav";
 @use "mitarbeiter-foto";
+@use "this-swiper";

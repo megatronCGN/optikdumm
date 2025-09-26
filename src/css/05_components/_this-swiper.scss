@@ -1,0 +1,14 @@
+@media (min-width: 700px) {
+
+    .swiper-animate-content img {
+        transition: transform 300ms ease-in-out;
+    }
+
+    .swiper-slide img {
+        transform: scale(.5);
+    }
+
+    .swiper-slide-active + .swiper-slide img {
+        transform: scale(1);
+    }
+}
