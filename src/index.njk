@@ -12,15 +12,22 @@ title: Startseite
         <div class="elevator__swiper">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    {% for color in ['1', '2', '3', '4', '5'] %}
+                    {% for src in [
+                        'ANDY WOLF EYEWEAR_5154_01_side.png',
+                        'ANDY WOLF EYEWEAR_5155_09_side.png',
+                        'ANDY WOLF EYEWEAR_AW11_04_side.png',
+                        'YOUMAWO_Bold_Avon_Side_15_Walnut.png',
+                        'YOUMAWO_Classic_Gordo_Side_01_Black.png',
+                        'YOUMAWO_Classic_Whitney_Side_16_Mystery_Blue.png'
+                    ] %}
                         <div class="swiper-slide">
                             <img alt="Retro Sonnenbrille"
                                  alt=""
                                  eleventy:formats="webp"
                                  eleventy:widths="1280"
                                  loading="lazy"
-                                 sizes="320px, 640px, 1280px"
-                                 src="/img/brille.png"
+                                 sizes="480px"
+                                 src="/img/brillen/{{ src }}"
                                  style=""
                             />
                         </div>
