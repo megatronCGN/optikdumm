@@ -9,6 +9,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.4",
     "sass": "^1.89.2",
-    "svala": "^1.0.1"
+    "svala": "^1.0.1",
+    "swiper": "^12.0.1"
   }
 }
