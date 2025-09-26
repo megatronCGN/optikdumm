@@ -1,19 +1,36 @@
 ---
-layout: base.njk
 title: Startseite
-heroContent: '
-    <h1>Optik Dumm – <br>Ihr zuverlässiger Optiker<br> im Veedel.</h1>
-    <img alt="Retro Sonnenbrille"
-         alt=""
-         eleventy:formats="webp"
-         eleventy:widths="1280"
-         loading="lazy"
-         sizes="320px, 640px, 1280px"
-         src="/img/brille.png"
-         style="margin-block-end: calc(var(--space-xl) * -1); max-width: 600px;"
-    />
-'
 ---
+{% extends 'base.njk' %}
+
+{% block hero %}
+    <div class="elevator layout__full-bleed">
+        <div class="elevator__background pattern-boxes" style="--pattern-multiplier: .5"></div>
+        <div class="elevator__text">
+            <h1>Optik Dumm – <br>Ihr zuverlässiger Optiker<br> im Veedel.</h1>
+        </div>
+        <div class="elevator__swiper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for color in ['1', '2', '3', '4', '5'] %}
+                        <div class="swiper-slide">
+                            <img alt="Retro Sonnenbrille"
+                                 alt=""
+                                 eleventy:formats="webp"
+                                 eleventy:widths="1280"
+                                 loading="lazy"
+                                 sizes="320px, 640px, 1280px"
+                                 src="/img/brille.png"
+                                 style=""
+                            />
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
 <div class="flow-xl layout m-t-xl">
     <div class="layout__wide-content m-l-auto max-width-paragraph-max">
         <p>Optik Dumm in Neuehrefeld ist so bunt und vielfältig wie Köln selbst. Unser engagiertes Team ist Ihr kompetenter Ansprechpartner für alle Belange rund um das Thema „besser sehen“, wobei die Qualität unserer Produkte und die Zufriedenheit unserer Kunden an oberster Stelle stehen. Wir glauben, dass zufriedene Kunden der Schlüssel zu unserem Erfolg sind, und legen besonderen Wert auf die Präzision bei der Augenglasbestimmung. Durch sorgfältige und professionelle Arbeit gewährleisten wir die bestmögliche Qualität. Besuchen Sie uns gerne in unserem Laden, um in einem persönlichen Gespräch Ihre Bedürfnisse und Wünsche zu besprechen.</p>
@@ -177,6 +194,11 @@ heroContent: '
                     url: 'https://mantimanti.de/'
                 },
                 {
+                    name: 'Martin & Martin',
+                    img: 'martinmartin.svg',
+                    url: 'https://https://martinxmartin.com/'
+                },
+                {
                     name: 'Oscar Magnussen',
                     img: 'oscarmagnussen.png',
                     url: 'https://oscarmagnuson.com/'
@@ -199,4 +221,4 @@ heroContent: '
         </ul>
     </section>
 </div>
-
+{% endblock %}
