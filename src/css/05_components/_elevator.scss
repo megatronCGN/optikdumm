@@ -2,11 +2,11 @@
 @use "../01_tools" as tools;
 
 .elevator {
-    min-height: 75dvh;
+    min-height: 55dvh;
     display: grid;
     grid-template-columns: var(--layout-margin) 1fr 0.618fr var(--layout-margin);
     grid-template-rows: auto min-content min-content;
-    row-gap: var(--space-m);
+    row-gap: var(--space-xl);
 }
 
 .elevator__background {
