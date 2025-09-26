@@ -9,6 +9,10 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('src/img/*.svg');
     eleventyConfig.addPassthroughCopy('src/fonts');
+    eleventyConfig.addPassthroughCopy("src/js");
+
+    // Swiper
+    eleventyConfig.addPassthroughCopy({"node_modules/swiper": '/js/swiper'});
 
     eleventyConfig.addTemplateFormats("scss");
     eleventyConfig.addExtension("scss", {
