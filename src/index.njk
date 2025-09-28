@@ -16,38 +16,38 @@ title: Startseite
                         {
                             alt: 'Andy Wolf Eyewear 5154',
                             src: 'ANDY WOLF EYEWEAR_5154_01_side.png',
-                            h: '200',
-                            w: '425'
+                            h: '2000',
+                            w: '4250'
                         },
                         {
                             alt: 'Andy Wolf Eyewear 5155',
                             src: 'ANDY WOLF EYEWEAR_5155_09_side.png',
-                            h: '193',
-                            w: '422'
+                            h: '1930',
+                            w: '4220'
                         },
                         {
                             alt: 'Andy Wolf Eyewear AW11',
                             src: 'ANDY WOLF EYEWEAR_AW11_04_side.png',
-                            h: '176',
-                            w: '436'
+                            h: '1760',
+                            w: '4360'
                         },
                         {
                             alt: 'Youmawo Bold Avon Walnut',
                             src: 'YOUMAWO_Bold_Avon_Side_15_Walnut.png',
-                            h: '142',
-                            w: '400'
+                            h: '1420',
+                            w: '4000'
                         },
                         {
                             alt: 'Youmawo Classic Gordo Black',
                             src: 'YOUMAWO_Classic_Gordo_Side_01_Black.png',
-                            h: '146',
-                            w: '404'
+                            h: '1460',
+                            w: '4040'
                         },
                         {
                             alt: 'Youmawo Classic Whitney Mystery Blue',
                             src: 'YOUMAWO_Classic_Whitney_Side_16_Mystery_Blue.png',
-                            h: '150',
-                            w: '400'
+                            h: '1500',
+                            w: '4000'
                         }
                     ] %}
                         <div class="swiper-slide">
@@ -55,10 +55,10 @@ title: Startseite
                                  eleventy:formats="webp"
                                  eleventy:widths="1280"
                                  loading="eager"
-                                 sizes="480px"
+                                 sizes="480px, 640px"
                                  src="/img/brillen/{{ img.src }}"
-                                 width="{{ img.w }}"
-                                 height="{{ img.h }}"
+                                 width="{{ img.w / 2 }}"
+                                 height="{{ img.h / 2 }}"
                             />
                         </div>
                     {% endfor %}
@@ -82,49 +82,51 @@ title: Startseite
              src="/img/team.png"
         />
     </div>
-    <section class="layout__wide-content flow-l">
-        <h2 class="h1" id="leistungen">Unsere Leistungen</h2>
-        <div class="text-300 grid gap-2xl" style="grid-template-columns: repeat(auto-fit, minmax(100px, 30ch))">
-            {% set leistungen = [
-                {
-                    name: 'Sehtest',
-                    text: 'Einmal im Jahr sollten Sie einen Sehtest bei uns oder Ihrem Augenarzt machen lassen, denn eine Verschlechterung der Sehleistung verläuft häufig schleichend und wird meist erst spät wahrgenommen.'
-                },
-                {
-                    name: 'Qualitäts-Garantie',
-                    text: 'Auf alle Brillen erhalten Sie eine Qualitäts-Garantie von 2 Jahren.'
-                },
-                {
-                    name: 'Verträglichkeits-Garantie',
-                    text: 'Sie erhalten eine 6-monatige Verträglichkeits-Garantie auf alle von uns verarbeiteten Brillengläser.'
-                },
-                {
-                    name: 'Ultraschallreinigung',
-                    text: 'Auch bei sorgfältiger Reinigung Ihrer Brille mit einem Mikrofasertuch bleiben Verschmutzungen in Ecken, Kanten und Rillen bestehen. Deshalb bieten wir Ihnen eine kostenfreie Ultraschall-Reinigung an. Schonend und gründlich.'
-                },
-                {
-                    name: 'Brillen-Check',
-                    text: 'Bringen Sie uns Ihre Brille zum Brillen-Check. Anschließend erhalten Sie Ihre Brille Ultraschall gereinigt und generalüberholt zurück.'
-                },
-                {
-                    name: 'Kontaktlinsen-Probetragen',
-                    text: 'Sie wollten schon immer einmal Kontaktlinsen ausprobieren? Kein Problem – vereinbaren Sie einfach einen Termin und lassen Sie sich von uns unverbindlich Kontaktlinsen aufsetzten.'
-                },
-                {
-                    name: 'Eigene Werkstatt',
-                    text: 'Um eine optimale Verglasung Ihrer Brille sicher zu stellen, garantieren wir noch echtes Handwerk aus eigener Hand. Dabei kommt es auf Präzision, Geduld und natürlich Geschick an.'
-                }
-            ] %}
+    <section class="layout__full-bleed layout p-v-xl m-t-0" style="background-color: var(--color-grey-200)">
+        <div class="layout__content flow-l">
+            <h2 class="h1" id="leistungen">Unsere Leistungen</h2>
+            <div class="text-300 grid gap-xl" style="grid-template-columns: repeat(auto-fit, minmax(100px, 30ch))">
+                {% set leistungen = [
+                    {
+                        name: 'Sehtest',
+                        text: 'Einmal im Jahr sollten Sie einen Sehtest bei uns oder Ihrem Augenarzt machen lassen, denn eine Verschlechterung der Sehleistung verläuft häufig schleichend und wird meist erst spät wahrgenommen.'
+                    },
+                    {
+                        name: 'Qualitäts-Garantie',
+                        text: 'Auf alle Brillen erhalten Sie eine Qualitäts-Garantie von 2 Jahren.'
+                    },
+                    {
+                        name: 'Verträglichkeits-Garantie',
+                        text: 'Sie erhalten eine 6-monatige Verträglichkeits-Garantie auf alle von uns verarbeiteten Brillengläser.'
+                    },
+                    {
+                        name: 'Ultraschallreinigung',
+                        text: 'Auch bei sorgfältiger Reinigung Ihrer Brille mit einem Mikrofasertuch bleiben Verschmutzungen in Ecken, Kanten und Rillen bestehen. Deshalb bieten wir Ihnen eine kostenfreie Ultraschall-Reinigung an. Schonend und gründlich.'
+                    },
+                    {
+                        name: 'Brillen-Check',
+                        text: 'Bringen Sie uns Ihre Brille zum Brillen-Check. Anschließend erhalten Sie Ihre Brille Ultraschall gereinigt und generalüberholt zurück.'
+                    },
+                    {
+                        name: 'Kontaktlinsen-Probetragen',
+                        text: 'Sie wollten schon immer einmal Kontaktlinsen ausprobieren? Kein Problem – vereinbaren Sie einfach einen Termin und lassen Sie sich von uns unverbindlich Kontaktlinsen aufsetzten.'
+                    },
+                    {
+                        name: 'Eigene Werkstatt',
+                        text: 'Um eine optimale Verglasung Ihrer Brille sicher zu stellen, garantieren wir noch echtes Handwerk aus eigener Hand. Dabei kommt es auf Präzision, Geduld und natürlich Geschick an.'
+                    }
+                ] %}
 
-            {% for leistung in leistungen %}
-                <p>
-                    <span class="font-black">{{ leistung.name }}</span><br>
-                    {{ leistung.text }}
-                </p>
-            {% endfor %}
+                {% for leistung in leistungen %}
+                    <p>
+                        <span class="font-black">{{ leistung.name }}</span><br>
+                        {{ leistung.text }}
+                    </p>
+                {% endfor %}
+            </div>
         </div>
     </section>
-    <section class="layout__full-bleed">
+    <section class="layout__full-bleed m-t-0">
         <div class="layout pattern-boxes flow-2xl p-v-xl">
             <div class="layout__wide-content justify-self-end">
                 <h2 class="h1" id="produkte">Unsere Produkte</h2>
