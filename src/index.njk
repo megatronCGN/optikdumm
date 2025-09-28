@@ -5,30 +5,60 @@ title: Startseite
 
 {% block hero %}
     <div class="elevator layout__full-bleed">
-        <div class="elevator__background pattern-boxes" style="--pattern-multiplier: .5"></div>
+        <div class="elevator__background pattern-boxes" style="--Xpattern-multiplier: .5"></div>
         <div class="elevator__text">
-            <h1>Optik Dumm – <br>Ihr zuverlässiger Optiker<br> im Veedel.</h1>
+            <h1>Optik Dumm<br> – Ihr zuverlässiger Optiker im Veedel.</h1>
         </div>
         <div class="elevator__swiper">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    {% for src in [
-                        'ANDY WOLF EYEWEAR_5154_01_side.png',
-                        'ANDY WOLF EYEWEAR_5155_09_side.png',
-                        'ANDY WOLF EYEWEAR_AW11_04_side.png',
-                        'YOUMAWO_Bold_Avon_Side_15_Walnut.png',
-                        'YOUMAWO_Classic_Gordo_Side_01_Black.png',
-                        'YOUMAWO_Classic_Whitney_Side_16_Mystery_Blue.png'
+                    {% for img in [
+                        {
+                            alt: 'Andy Wolf Eyewear 5154',
+                            src: 'ANDY WOLF EYEWEAR_5154_01_side.png',
+                            h: '200',
+                            w: '425'
+                        },
+                        {
+                            alt: 'Andy Wolf Eyewear 5155',
+                            src: 'ANDY WOLF EYEWEAR_5155_09_side.png',
+                            h: '193',
+                            w: '422'
+                        },
+                        {
+                            alt: 'Andy Wolf Eyewear AW11',
+                            src: 'ANDY WOLF EYEWEAR_AW11_04_side.png',
+                            h: '176',
+                            w: '436'
+                        },
+                        {
+                            alt: 'Youmawo Bold Avon Walnut',
+                            src: 'YOUMAWO_Bold_Avon_Side_15_Walnut.png',
+                            h: '142',
+                            w: '400'
+                        },
+                        {
+                            alt: 'Youmawo Classic Gordo Black',
+                            src: 'YOUMAWO_Classic_Gordo_Side_01_Black.png',
+                            h: '146',
+                            w: '404'
+                        },
+                        {
+                            alt: 'Youmawo Classic Whitney Mystery Blue',
+                            src: 'YOUMAWO_Classic_Whitney_Side_16_Mystery_Blue.png',
+                            h: '150',
+                            w: '400'
+                        }
                     ] %}
                         <div class="swiper-slide">
-                            <img alt="Retro Sonnenbrille"
-                                 alt=""
+                            <img alt="{{ img.src }}"
                                  eleventy:formats="webp"
                                  eleventy:widths="1280"
-                                 loading="lazy"
+                                 loading="eager"
                                  sizes="480px"
-                                 src="/img/brillen/{{ src }}"
-                                 style=""
+                                 src="/img/brillen/{{ img.src }}"
+                                 width="{{ img.w }}"
+                                 height="{{ img.h }}"
                             />
                         </div>
                     {% endfor %}

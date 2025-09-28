@@ -1,7 +1,20 @@
+.swiper-slide {
+    padding-inline: var(--space-xs);
+
+    img {
+        width: 100%;
+        max-width: none;
+    }
+}
+
 @media (min-width: 700px) {
 
     .swiper-animate-content img {
         transition: transform 300ms ease-in-out;
+    }
+
+    .swiper-slide {
+        padding-inline: 0;
     }
 
     .swiper-slide img {
