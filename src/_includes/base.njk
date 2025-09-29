@@ -64,7 +64,7 @@
             <footer class="page__footer page-footer" style="margin-block-start: var(--space-3xl)">
                 <div class="page-footer__content">
                     <div class="page-footer__logo-sysnav flow-m">
-                        <img class="page-footer-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/>
+                        {% include 'logo.svg' %}
                         <nav aria-label="Sysnavigation" class="sys-nav">
                             {% set sysNavPages = collections.sys | eleventyNavigation %}
                             {% set sysNavItemClass = 'sys-nav__item' %}
