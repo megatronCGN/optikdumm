@@ -8,6 +8,10 @@
     @include tools.flow;
 }
 
+.flow-m {
+    @include tools.flow(var(--space-m));
+}
+
 .flow-l {
     @include tools.flow(var(--space-l));
 }

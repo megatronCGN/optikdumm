@@ -63,8 +63,21 @@
             </main>
             <footer class="page__footer page-footer" style="margin-block-start: var(--space-3xl)">
                 <div class="page-footer__content">
-                    <img class="page-footer-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/>
-                    <div>
+                    <div class="page-footer__logo-sysnav flow-m">
+                        <img class="page-footer-logo" eleventy:ignore src="/img/logo.svg" alt="Optik Dumm"/>
+                        <nav aria-label="Sysnavigation" class="sys-nav">
+                            {% set sysNavPages = collections.sys | eleventyNavigation %}
+                            {% set sysNavItemClass = 'sys-nav__item' %}
+                            <ul class="sys-nav__list" role="list">
+                                {%- for entry in sysNavPages %}
+                                    <li {% if entry.url == page.url %}aria-current="page" class="{{ sysNavItemClass }} {{ sysNavItemClass ~ '--active' }}"{% else %}{{ sysNavItemClass }}{% endif %}>
+                                        <a class="sys-nav__text" href="{{ entry.url }}">{{ entry.title }}</a>
+                                    </li>
+                                {%- endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="page-footer__contact">
                         <p><span>Kontakt</span><br/>
                             Iltisstraße 9<br/>
                             50825 Köln<br/>

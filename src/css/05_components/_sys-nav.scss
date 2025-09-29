@@ -1,0 +1,10 @@
+@use "../00_settings" as settings;
+@use "../01_tools" as tools;
+
+.sys-nav__text {
+    @include tools.link-interaction;
+
+    .sys-nav__item--active & {
+        font-weight: bold;
+    }
+}

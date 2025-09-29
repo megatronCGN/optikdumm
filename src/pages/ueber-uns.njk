@@ -1,18 +1,18 @@
 ---
 tags: main
-layout: base.njk
 title: Über uns
 eleventyNavigation:
     key: Über uns
-heroContent: '
-    <h1>Über uns</h1>
-'
+    order: 4
 ---
+{% extends 'base.njk' %}
 
-<div class="layout">
-    <section class="layout__wide-content flow flow-l">
-        <p class="max-width-paragraph-max">Wir sind seit über 40 Jahren Ihr Augenoptik-Fachgeschäft in Köln-Ehrenfeld.
-            Seit Anfang 2015 in zweiter Generation ein traditioneller Handwerksbetrieb, der Ihre Brillen vor Ort in der eigenen Werkstatt fertigt, repariert und optimal anpasst.</p>
+{% block content %}
+    <div class="layout m-t-2xl">
+        <section class="layout__wide-content flow flow-l">
+            <h1>{{ title }}</h1>
+            <p class="max-width-paragraph-max">Wir sind seit über 40 Jahren Ihr Augenoptik-Fachgeschäft in Köln-Ehrenfeld.
+                Seit Anfang 2015 in zweiter Generation ein traditioneller Handwerksbetrieb, der Ihre Brillen vor Ort in der eigenen Werkstatt fertigt, repariert und optimal anpasst.</p>
             <div class="grid gap-xl" style="grid-template-columns: repeat(auto-fill, 180px);">
                 {% for mitarbeiter in [
                     {
@@ -52,5 +52,6 @@ heroContent: '
                     </div>
                 {% endfor %}
             </div>
-    </section>
-</div>
+        </section>
+    </div>
+{% endblock %}

@@ -71,15 +71,18 @@
     flex-wrap: wrap;
     gap: var(--space-m-l);
     font-size: var(--step--1);
+}
 
-    div {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-m-l);
-    }
+.page-footer__logo-sysnav {
+    margin-inline-end: auto;
 }
 
 .page-footer-logo {
     height: var(--space-m-l);
-    margin-inline-end: auto;
+}
+
+.page-footer__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m-l);
 }
