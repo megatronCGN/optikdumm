@@ -1,10 +1,6 @@
 @use "../00_settings" as settings;
 @use "../01_tools" as tools;
 
-.main-nav {
-    margin-inline-end: var(--space-m);
-}
-
 .main-nav__list {
     display: flex;
     flex-wrap: wrap;

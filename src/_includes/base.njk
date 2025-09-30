@@ -40,7 +40,7 @@
             <header class="page__header page-header">
                 <a href="/" class="page-header__logo">{% include 'logo.svg' %}</a>
 
-                <nav aria-label="Hauptnavigation" class="main-nav">
+                <nav aria-label="Hauptnavigation" class="page-header__main-nav main-nav">
                     {% set mainNavPages = collections.main | eleventyNavigation %}
                     {% set mainNavItemClass = 'main-nav__item' %}
                     <ul class="main-nav__list" role="list">

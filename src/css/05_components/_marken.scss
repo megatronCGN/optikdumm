@@ -20,7 +20,7 @@
     border: 1px solid var(--color-grey-300);
 
     position: relative;
-    transition: transform 100ms cubic-bezier(1,0,0,1);
+    transition: transform 100ms ease-in-out;
 
     a {
         height: 100%;

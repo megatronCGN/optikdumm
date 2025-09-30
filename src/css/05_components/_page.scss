@@ -18,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: space-between;
     gap: var(--space-m);
 }
 
@@ -25,7 +26,6 @@
     @include tools.link-interaction;
 
     align-self: center;
-    margin-inline-end: auto;
     font-weight: bold;
 }
 
@@ -38,8 +38,14 @@
     }
 }
 
+.page-header__main-nav {
+    margin-inline-start: auto;
+}
+
 .page-header__phone {
     @include tools.link-interaction;
+
+    margin-inline-start: auto;
 }
 
 .page__main {
