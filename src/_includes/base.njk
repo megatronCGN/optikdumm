@@ -53,10 +53,10 @@
                 </nav>
                 <a class="page-header__phone link-interaction" href="tel:+49221551166">0221.551166</a>
             </header>
-            <main class="page__main page-main flow">
+            <main class="page__main page-main {% block pageMainClass%}{% endblock %}">
                 {% block hero %}
                 {% endblock %}
-                <div class="page-main__content flow">
+                <div class="page-main__content {% block pageMainContentClass%}{% endblock %}">
                     {% block content %}{% endblock %}
 {#                    {{ content | safe }}#}
                 </div>
