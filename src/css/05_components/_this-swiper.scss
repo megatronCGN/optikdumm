@@ -1,3 +1,9 @@
+.swiper-wrapper {
+    --swiper-wrapper-transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+
+    align-items: center;
+}
+
 .swiper-slide {
     padding-inline: var(--space-xs);
 
@@ -10,7 +16,7 @@
 @media (min-width: 700px) {
 
     .swiper-animate-content img {
-        transition: transform 300ms ease-in-out;
+        transition: transform 300ms cubic-bezier(.18,.89,.32,1.28);
     }
 
     .swiper-slide {
