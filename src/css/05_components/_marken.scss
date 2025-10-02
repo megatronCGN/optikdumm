@@ -3,7 +3,7 @@
 
 .marken {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
 }
 
 .marken__marke {
@@ -20,7 +20,7 @@
     border: 1px solid var(--color-grey-300);
 
     position: relative;
-    transition: transform 100ms ease-in-out;
+    transition: transform 200ms cubic-bezier(.18,.89,.32,1.28);
 
     a {
         height: 100%;
