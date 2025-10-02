@@ -9,6 +9,7 @@
     border: 1px solid var(--color-foreground-muted);
     padding: var(--_card-padding);
     background-color: var(--_card-color-background);
+    hyphens: auto;
 
     display: flex;
     flex-direction: column;

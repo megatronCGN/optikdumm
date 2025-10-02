@@ -2,20 +2,25 @@
 @use "../01_tools" as tools;
 
 .card-grid {
-    --_card-grid-gap: var(--card-grid-gap, var(--space-xl));
+    --_card-grid-gap-column: var(--card-grid-gap-column, var(--space-xl));
+    --_card-grid-gap-row: var(--card-grid-gap-row, var(--space-xl));
     --_card-grid-items: var(--card-grid-items, 1);
 
     display: flex;
-    gap: var(--_card-grid-gap);
+    column-gap: var(--_card-grid-gap-column);
+    row-gap: var(--_card-grid-gap-row);
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: flex-end;
 
     container-type: inline-size;
 }
 
 .card-grid > * {
+    --card-width: calc(100% / var(--_card-grid-items) - (var(--_card-grid-gap-column) * (var(--_card-grid-items) - 1)/var(--_card-grid-items)));
+
     flex: 100% 0 0;
-    max-width: calc(100% / var(--_card-grid-items) - (var(--_card-grid-gap) * (var(--_card-grid-items) - 1)/var(--_card-grid-items)));
+    max-width: var(--card-width);
+    transition: transform 200ms cubic-bezier(.18,.89,.32,1.28);
 
     @container (width >= 600px) {
         --_card-grid-items: 2;
@@ -23,5 +28,27 @@
 
     @container (width >= 900px) {
         --_card-grid-items: 3;
+
+        &:nth-child(3) ~ * {
+            align-self: flex-start;
+        }
+
+        &:nth-child(3) + * {
+            margin-inline-start: var(--card-width);
+        }
+    }
+
+    &:hover, &:focus-visible {
+        transform: scale(1.125);
+        z-index: 1;
+    }
+}
+
+
+.card-grid:hover,
+.card-grid:focus-within {
+
+    > *:not(:hover):not(:focus-visible) {
+        transform: scale(.9875);
     }
 }
