@@ -3,7 +3,47 @@ tags: produkte
 title: Sonnenbrillen
 beschreibung: 'Bei uns finden Sie eine handverlesene Auswahl an modernen Sonnenbrillen, die nicht nur schick sind, sondern auch Ihre Augen schützen. Entdecken Sie sowohl bekannte Marken wie Cazal, Ray-Ban und Oakley als auch hochwertige Independent Labels wie Gigi Studios aus Spanien oder Raen aus Kalifornien.'
 img:
-    src: 'ANDY WOLF EYEWEAR_JADE_03_side.png'
-    offset: '-2.5lh'
+    src: 'cazal-mod-8040.png'
+    offset: '-2lh'
+    w: 1200
+    h: 551
 date: 2025-01-02
 ---
+
+{% extends 'base.njk' %}
+
+{% block pageMainClass%}flow flow-2xl{% endblock %}
+
+{% block hero %}
+    <div class="layout__full-bleed layout" style="background-color: var(--color-grey-300)">
+        <img alt=""
+             eleventy:formats="webp"
+             eleventy:widths="1280"
+             loading="lazy"
+             sizes="320px, 640px, 1280px"
+             src="/img/deckard-sunglasses-light-taupe-rivet-detail.jpg"
+             style="
+                 grid-column: 1/6;
+                 grid-row: 1;
+                 height: 100%;
+                 object-fit: cover;
+                 object-position: right;
+                 mix-blend-mode: darken;
+             "
+             width="1125"
+             height="1688"
+        />
+        <h1 style="grid-column: 6/wide-content; grid-row: 1; padding-block: var(--space-2xl)">Stylische Sonnenbrillen für optimalen Schutz</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="layout">
+        <section class="layout__content flow flow-l">
+            <p>Entdecken Sie unsere handverlesene Auswahl an modernen, modischen Sonnenbrillen, die nicht nur Ihre Augen vor schädlicher UV-Strahlung und störender Blendung schützen, sondern auch einen starken modischen Akzent setzen.</p>
+            <p>Unsere Kollektion umfasst sowohl bekannte Marken wie Cazal, Ray-Ban und Oakley, die für ihre herausragende Qualität und ikonische Designs bekannt sind. Darüber hinaus präsentieren wir exklusive Independent-Labels wie Gigi Studios aus Spanien und Raen aus Kalifornien, die mit einzigartigen Stilen und hochwertigen Materialien überzeugen.</p>
+            <p>Genießen Sie den perfekten Mix aus Funktionalität und Ästhetik – setzen Sie ein Statement und schützen Sie Ihre Augen mit unseren erstklassigen Sonnenbrillen!</p>
+        </section>
+    </div>
+{% endblock %}
+
