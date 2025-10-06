@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: var(--layout-margin) auto 1fr var(--layout-margin);
     grid-template-rows: 1fr min-content;
+
+    > * {
+        min-height: 0;
+    }
 }
 
 .hero__image {
