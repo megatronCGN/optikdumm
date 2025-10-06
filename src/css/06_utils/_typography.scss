@@ -26,6 +26,13 @@
 ));
 
 @include svala.generator((
+    'letter-spacing': (
+        'property': 'letter-spacing',
+        'values': (0:0),
+        'responsive': 'true',
+        'important': true
+    ),
+
     'text': (
         'property': 'font-size',
         'values': typography.$font-sizes-map,
