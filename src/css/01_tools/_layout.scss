@@ -12,6 +12,14 @@
                     [content-end] 1fr 1fr
                 [wide-content-end] var(--layout-margin)
             [full-bleed-end];
+
+    > * {
+        min-height: 0;
+    }
+
+    img {
+        height: auto;
+    }
 }
 
 @mixin layout__full-bleed {
