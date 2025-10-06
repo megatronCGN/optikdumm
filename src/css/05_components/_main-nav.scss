@@ -8,9 +8,9 @@
 }
 
 .main-nav__text {
-    @include tools.link-interaction;
+    @include tools.link-nav;
 
     .main-nav__item--active & {
-        font-weight: bold;
+        --_link-color-foreground-idle: var(--link-color-foreground-hover);
     }
 }
