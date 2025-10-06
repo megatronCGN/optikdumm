@@ -7,3 +7,7 @@
 .link-interaction {
     @include tools.link-interaction;
 }
+
+.link-nav {
+    @include tools.link-nav;
+}
