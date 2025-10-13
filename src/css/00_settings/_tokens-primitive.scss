@@ -11,7 +11,9 @@
     --color-brown-400: #a29a7a;
 
     // Focus Ring
-    --color-focus-ring-base: var(--color-foreground);
+    --color-outline: var(--color-foreground);
+    --offset-outline: 0.125lh;
+    --width-outline: 0.125em;
 }
 
 /*

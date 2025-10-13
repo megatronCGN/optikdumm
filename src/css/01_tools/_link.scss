@@ -12,6 +12,8 @@
     --_link-text-underline-offset: var(--link-text-underline-offset, var(--text-underline-offset-100));
 
     --_link-color-outline: var(--link-color-outline, var(--_link-color-foreground-focus));
+    --_link-offset-outline: var(--link-offset-outline, var(--width-outline));
+    --_link-width-outline: var(--link-width-outline, var(--offset-outline));
 
     color: var(--_link-color-foreground-idle);
     font-weight: inherit;
@@ -29,8 +31,8 @@
     &:focus-visible {
         color: var(--_link-color-foreground-focus);
         text-decoration-line: var(--_link-text-decoration-line-focus);
-        outline: var(--_link-color-outline) solid var(--focus-ring-width);
-        outline-offset: var(--focus-ring-offset);
+        outline: var(--_link-color-outline) solid var(--_link-width-outline);
+        outline-offset: var(--_link-offset-outline);
     }
 }
 
