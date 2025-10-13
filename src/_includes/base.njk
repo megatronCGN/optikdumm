@@ -61,7 +61,7 @@
 {#                    {{ content | safe }}#}
                 </div>
             </main>
-            <footer class="page__footer page-footer" style="margin-block-start: var(--space-3xl)">
+            <footer class="page__footer page-footer theme-inverted" style="margin-block-start: var(--space-3xl)">
                 <div class="page-footer__content">
                     <div class="page-footer__logo-sysnav flow-m">
                         {% include 'logo.svg' %}
@@ -78,13 +78,14 @@
                         </nav>
                     </div>
                     <div class="page-footer__contact" id="kontakt">
-                        <p><span>Kontakt</span><br/>
+                        <p><span class="font-black">Kontakt</span><br/>
                             Iltisstraße 9<br/>
                             50825 Köln<br/>
-                            Telefon 0221.551166<br>
+                            Telefon <a href="tel:+49221551166">0221.551166</a><br>
+                            E-Mail <a href="mailto:dumm@optikdumm.de">dumm@optikdumm.de</a><br>
                             <a href="/">Optik Dumm auf Google Maps</a>
                         </p>
-                        <p><span>Öffnungszeiten</span><br/>Mo, Di, Do, Fr<br/>09.00 bis 13.00 Uhr / 15.00 bis 18.30 Uhr<br/>Mi 09.00 bis 13.00 Uhr<br/>Sa 10.00 bis 14.00 Uhr</p>
+                        <p><span class="font-black">Öffnungszeiten</span><br/>Mo, Di, Do, Fr<br/>09.00 bis 13.00 Uhr / 15.00 bis 18.30 Uhr<br/>Mi 09.00 bis 13.00 Uhr<br/>Sa 10.00 bis 14.00 Uhr</p>
                     </div>
                 </div>
             </footer>
