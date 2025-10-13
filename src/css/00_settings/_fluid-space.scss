@@ -20,6 +20,9 @@
     --space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
     --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
     --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
+
+    /* Custom pairs */
+    --space-m-3xl: clamp(1.6875rem, -0.3342rem + 10.1087vw, 7.5rem);
 }
 
 $spaces-map: (

@@ -77,12 +77,9 @@
 
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-m-l);
+    gap: var(--space-m-3xl);
+    justify-content: space-between;
     font-size: var(--step--1);
-}
-
-.page-footer__logo-sysnav {
-    margin-inline-end: auto;
 }
 
 .page-footer-logo {
@@ -92,5 +89,5 @@
 .page-footer__contact {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-m-l);
+    gap: var(--space-m-3xl);
 }
