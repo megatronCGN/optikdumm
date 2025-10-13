@@ -22,3 +22,16 @@
     --button-text-decoration-line-idle: none;
     --button-text-decoration-line-hover: underline;
 }
+
+.theme-inverted {
+    --color-foreground: var(--color-grey-100);
+    --color-foreground-inverted: var(--color-grey-600);
+    --color-foreground-muted: var(--color-brown-400);
+
+    --color-background: var(--color-grey-600);
+    --color-background-inverted: var(--color-grey-100);
+
+    /* Link */
+    --link-color-foreground-idle: var(--color-foreground);
+    --link-color-foreground-hover: var(--color-grey-300);
+}
