@@ -14,6 +14,8 @@
 }
 
 .page-header {
+    container-type: inline-size;
+
     padding-block: var(--space-m);
     display: flex;
     flex-wrap: wrap;
@@ -39,12 +41,12 @@
     }
 }
 
-.page-header__main-nav {
-}
-
 .page-header__phone {
     @include tools.link-nav;
-    margin-inline-start: auto;
+
+    @container (min-width:575px) {
+        margin-inline-start: auto;
+    }
 }
 
 .page__main {
