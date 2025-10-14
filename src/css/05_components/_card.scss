@@ -6,7 +6,7 @@
     --_card-color-background: var(--card-color-background, var(--color-background));
     --_card-color-shadow: var(--card-shadow-color, hsl(198deg 11% 35% / var(--alpha, 12.5%)));
 
-    border: 1px solid var(--color-foreground-muted);
+    border: 1px solid var(--color-accent);
     padding: var(--_card-padding);
     background-color: var(--_card-color-background);
     hyphens: auto;
