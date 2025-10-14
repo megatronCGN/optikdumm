@@ -13,10 +13,10 @@
 }
 
 .hero__image {
-    object-fit: cover;
-
+    height: 100%;
     grid-column: 1/-1;
     grid-row: 1/-1;
+    object-fit: cover;
 }
 
 .hero__content {
