@@ -9,3 +9,53 @@ img:
     h: 1984
 date: 2025-01-03
 ---
+
+{% extends 'base.njk' %}
+
+{% block pageMainClass%}flow flow-2xl{% endblock %}
+
+{% block hero %}
+    <div class="hero hero--to-portrait-image">
+        <img class="hero__image" alt=""
+             eleventy:formats="webp"
+             eleventy:widths="1280"
+             loading="lazy"
+             sizes="320px, 640px, 1280px"
+             src="/img/deckard-sunglasses-light-taupe-rivet-detail.jpg"
+             width="1125"
+             height="1688"
+        />
+        <div class="hero__content">
+            <h1 class="h2 font-black">Perfekte Sicht für Aktive</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="layout">
+        <section class="layout__content flow flow-m">
+            <p>Wir haben über viele Jahre hinweg umfangreiche Erfahrungen im Bereich Sportoptik gesammelt. Diese Expertise ermöglicht es uns, Ihre visuellen Anforderungen optimal zu erfüllen und eine Vielzahl von zufriedenen Kunden auszustatten.</p>
+            <p>Wir bieten diverse Lösungen an, darunter:</p>
+            <ul class="m-t-xs">
+                <li>
+                    Kontaktlinsen als Einstärkenvariante, die für perfektes Sehen in der Ferne sorgen. Für diejenigen, die wechselnde Entfernungen benötigen, bieten wir auch multifokale Linsen an, die sowohl Nah- als auch Weitsicht unterstützen.
+                </li>
+                <li>
+                    Sportbrillen: Unsere Brillengläser werden auf individuelle Sehwerte und Lichtverhältnisse angepasst. Dies schließt auch multifokale und Gleitsichtvarianten ein, um maximale Flexibilität beim Sport zu gewährleisten. Zu den Herstellern zählen Julbo und Oakley.
+                </li>
+            </ul>
+            <p>Unsere Sportoptik ist ideal für zahlreiche Aktivitäten, darunter:</p>
+            <ul class="m-t-xs">
+                <li>Radfahren</li>
+                <li>Laufen</li>
+                <li>Wintersport</li>
+                <li>Schwimmen</li>
+                <li>Fitness</li>
+                <li>Wandern</li>
+            </ul>
+            <p>Wir bieten zudem Kindersportbrillen für verschiedene Sportarten an, wie Fußball, Handball und Eishockey, um sicherzustellen, dass auch die jungen Sportler optimal ausgestattet sind.</p>
+            <p>Mit unserer spezialisierten Sportoptik sind Sie bestens gerüstet, um Ihre sportlichen Ziele zu erreichen, egal ob bei Wettkämpfen oder im Freizeitbereich.</p>
+        </section>
+    </div>
+{% endblock %}
+

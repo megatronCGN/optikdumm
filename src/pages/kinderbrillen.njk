@@ -9,3 +9,35 @@ img:
     h: 1389
 date: 2025-01-04
 ---
+
+{% extends 'base.njk' %}
+
+{% block pageMainClass%}flow flow-2xl{% endblock %}
+
+{% block hero %}
+    <div class="hero hero--to-portrait-image">
+        <img class="hero__image" alt=""
+             eleventy:formats="webp"
+             eleventy:widths="1280"
+             loading="lazy"
+             sizes="320px, 640px, 1280px"
+             src="/img/deckard-sunglasses-light-taupe-rivet-detail.jpg"
+             width="1125"
+             height="1688"
+        />
+        <div class="hero__content">
+            <h1 class="h2 font-black">Kinderbrillen mit Stil und Funktionalität</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="layout">
+        <section class="layout__content flow flow-m">
+            <p>Unsere Auswahl an schönen, modischen und haltbaren Kinderbrillen sowie Kindersonnenbrillen ist äußerst vielfältig. Viele dieser Brillen stammen von Herstellern, die in Deutschland oder Europa produzieren, was nicht nur die Qualität, sondern auch die Nachhaltigkeit der Produkte gewährleistet.</p>
+            <p>Eine umfassende Beratung durch unser Team ist essenziell, um die passende Brille für Ihr Kind auszuwählen. Fachkundige Unterstützung hilft dabei, die richtigen Brillengläser und Fassungen zu finden, die den individuellen Bedürfnissen gerecht werden</p>
+            <p>Ein wichtiger Aspekt ist die Verwendung von Myopiepräventionsgläsern, die dazu beitragen, das Voranschreiten einer Kurzsichtigkeit bei Kindern zu vermindern. Diese speziellen Gläser sind darauf ausgelegt, das Sehvermögen langfristig zu schützen und Fehlentwicklungen vorzubeugen. Sie können mehr über diese innovativen Gläser bei <a href="https://www.essilor.com/de-at/essilor-stellest">Essilor Stellest</a> erfahren.</p>
+            <p>Mit einer maßgeschneiderten Kinderbrille kombinieren Sie Stil und Funktionalität, während Sie gleichzeitig auf die Gesundheit der Augen Ihres Kindes achten.</p>
+        </section>
+    </div>
+{% endblock %}
