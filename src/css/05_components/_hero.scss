@@ -24,6 +24,7 @@
     grid-row: 1/-1;
     align-self: center;
     background-color: var(--color-background);
+    hyphens: auto;
 
     > * {
         margin-inline-start: var(--layout-margin);
@@ -53,5 +54,11 @@
             grid-column: 8/13;
         }
     }
+}
 
+.hero--kontaktlinsen {
+
+    .hero__content {
+        align-self: end;
+    }
 }
