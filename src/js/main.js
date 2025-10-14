@@ -5,14 +5,19 @@ const swiper = new Swiper('.swiper', {
     modules: [Autoplay],
     autoplay: {
         delay: 3000,
-        disableOnInteraction: true
+        disableOnInteraction: true,
     },
     breakpoints: {
+        1: {
+            initialSlide: 1
+        },
         700: {
-            slidesPerView: 3
+            slidesPerView: 3,
+            initialSlide: 0
         },
         1200: {
             slidesPerView: 4,
+            initialSlide: 0
         }
     },
     loop: true,
