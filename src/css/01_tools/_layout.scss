@@ -3,12 +3,14 @@
 @use '../00_settings' as settings;
 
 @mixin layout-grid() {
+    --content-width: repeat(calc(var(--layout-columns) - 4), 1fr);
+
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns:
             [full-bleed-start] var(--layout-margin)
                 [wide-content-start] 1fr 1fr
-                    [content-start] repeat(calc(var(--layout-columns) - 4), 1fr)
+                    [content-start] var(--content-width)
                     [content-end] 1fr 1fr
                 [wide-content-end] var(--layout-margin)
             [full-bleed-end];
