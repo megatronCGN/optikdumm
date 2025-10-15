@@ -19,6 +19,7 @@
     grid-column: 2/4;
     grid-row: 1;
     align-self: end;
+    isolation: isolate; // New stacking context
 }
 
 .elevator__swiper {

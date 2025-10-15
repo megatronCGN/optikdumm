@@ -5,7 +5,9 @@ title: Startseite
 
 {% block hero %}
     <div class="elevator layout__full-bleed">
-        <div class="elevator__background pattern-boxes" style="--Xpattern-multiplier: .5"></div>
+        <div class="elevator__background">
+            <div class="pattern-boxes" style="--pattern-multiplier: 2"></div>
+        </div>
         <div class="elevator__text">
             <h1>Optik Dumm – <br>Ihr zuverlässiger<br> Optiker im Veedel.</h1>
         </div>
@@ -139,7 +141,8 @@ title: Startseite
         </div>
     </section>
     <section class="layout__full-bleed m-t-0">
-        <div class="layout pattern-boxes flow-2xl p-v-xl">
+        <div class="pattern-boxes"></div>
+        <div class="layout flow-2xl p-v-xl">
             <div class="layout__wide-content justify-self-end">
                 <h2 class="h1" id="produkte">Unsere Produkte</h2>
             </div>
@@ -154,7 +157,11 @@ title: Startseite
                                      loading="lazy"
                                      sizes="320px, 640px, 1280px"
                                      src="/img/brillen/{{ produkt.data.img.src }}"
-                                     style="height: auto; margin-block-start: {{ produkt.data.img.offset }};"
+                                     style="
+                                             height: auto;
+                                             margin-block-start: {{ produkt.data.img.offset.y }};
+                                             {% if produkt.data.img.offset.x %}margin-inline-start: {{ produkt.data.img.offset.x }};{% endif %}
+                                             "
                                      width="{{ produkt.data.w }}"
                                      height="{{ produkt.data.h }}"
                                 />

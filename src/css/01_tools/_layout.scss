@@ -18,26 +18,14 @@
 
 @mixin layout__full-bleed {
     grid-column: full-bleed;
-
-    > * {
-        min-height: 0;
-    }
 }
 
 @mixin layout__wide-content {
     grid-column: wide-content;
-
-    > * {
-        min-height: 0;
-    }
 }
 
 @mixin layout__content {
     grid-column: wide-content;
-
-    > * {
-        min-height: 0;
-    }
 
     @media (min-width: settings.$bp-sm) {
         grid-column: content;
@@ -46,9 +34,5 @@
 
 @mixin layout_span() {
     grid-column: var(--column-start, 1)/var(--column-end, -1);
-
-    > * {
-        min-height: 0;
-    }
 }
 

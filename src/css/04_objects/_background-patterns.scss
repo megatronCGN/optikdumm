@@ -1,11 +1,29 @@
-.pattern-boxes {
-    --pattern-multiplier: 1;
-    --pattern-line-color: var(--color-grey-200);
+:has(> .pattern-boxes) {
+    position: relative;
+}
 
-    background-color: white;
-    background-image:  linear-gradient(var(--pattern-line-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-line-color) 1px, white 1px);
-    background-size: calc(42px * var(--pattern-multiplier)) calc(72px * var(--pattern-multiplier));
-    background-position: -1px center;
-    border: 1px solid var(--pattern-line-color);
-    border-width: 1px 0;
+.pattern-boxes {
+    --pattern-line-color: var(--color-grey-200);
+    --pattern-multiplier: 1.25;
+    --pattern-height: 72;
+    --pattern-width: 42;
+    --pattern-aspect-ratio: calc(var(--pattern-width) / var(--pattern-height));
+
+    container-type: size;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    &::after {
+        content: '';
+        border-bottom: 1px solid var(--pattern-line-color);
+        display: block;
+        height: 100cqh;
+        width: 100cqw;
+
+        background-color: white;
+        background-image: linear-gradient(var(--pattern-line-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-line-color) 1px, white 1px);
+        background-size: calc(10cqh * var(--pattern-multiplier) * var(--pattern-aspect-ratio)) calc(10cqh * var(--pattern-multiplier));
+        background-position: -1px top;
+    }
 }

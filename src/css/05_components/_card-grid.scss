@@ -34,7 +34,7 @@
         }
 
         &:nth-child(3) + * {
-            margin-inline-start: var(--card-width);
+            margin-inline-start: calc(var(--card-width) / 2);
         }
     }
 
