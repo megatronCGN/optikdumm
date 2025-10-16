@@ -35,6 +35,8 @@
 }
 
 .hero--to-portrait-image {
+    --hero-img-grid-column-at-700: 8/-1;
+    --hero-img-grid-column-at-1000: 8/13;
 
     @media (min-width: 700px) {
 
@@ -44,14 +46,14 @@
         }
 
         .hero__image {
-            grid-column: 8/-1;
+            grid-column: var(--hero-img-grid-column-at-700);
         }
     }
 
     @media (min-width: 1000px) {
 
         .hero__image {
-            grid-column: 8/13;
+            grid-column: var(--hero-img-grid-column-at-1000);
         }
     }
 }
