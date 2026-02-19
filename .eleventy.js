@@ -8,6 +8,7 @@ export default function (eleventyConfig) {
     // Output directory: _site
 
     eleventyConfig.addPassthroughCopy('src/img/*.svg');
+    eleventyConfig.addPassthroughCopy('src/img/marken/*.*');
     eleventyConfig.addPassthroughCopy('src/fonts');
     eleventyConfig.addPassthroughCopy("src/js");
 
@@ -46,7 +47,10 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin,  {
+        formats: ["avif", "webp"],
+        widths: ["480", "600", "1280"],
+    });
 
     return {
         dir: {

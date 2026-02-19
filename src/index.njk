@@ -66,8 +66,6 @@ title: Startseite
                     ] %}
                         <div class="swiper-slide">
                             <img alt="{{ img.src }}"
-                                 eleventy:formats="webp"
-                                 eleventy:widths="1280"
                                  loading="eager"
                                  sizes="480px, 640px"
                                  src="/img/brillen/{{ img.src }}"
@@ -89,8 +87,6 @@ title: Startseite
     <div class="layout__full-bleed">
         <img alt="Das Team von Optik Dumm"
              class="width-100 max-width-none"
-             eleventy:formats="webp"
-             eleventy:widths="1600"
              loading="lazy"
              sizes="320px, 640px, 1280px, 1600px"
              src="/img/team.png"
@@ -152,8 +148,6 @@ title: Startseite
                         <article class="card flow flow-m">
                             <div class="card__media">
                                 <img alt=""
-                                     eleventy:formats="webp"
-                                     eleventy:widths="1280"
                                      loading="lazy"
                                      sizes="320px, 640px, 1280px"
                                      src="/img/brillen/{{ produkt.data.img.src }}"
@@ -262,6 +256,7 @@ title: Startseite
                         <img
                                 alt="{{ logo.name }}"
                                 eleventy:formats="{{ logo.img.split('.')[1] }}"
+                                eleventy:ignore
                                 src="/img/marken/{{ logo.img }}">
                     </a>
                 </li>
