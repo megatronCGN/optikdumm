@@ -4,7 +4,7 @@ export default {
     legalName: 'Optik Dumm e.K.',
     defaultDescription: 'Optik Dumm in Köln-Ehrenfeld: Ihr zuverlässiger Optiker für Brillen, Sonnenbrillen, Kontaktlinsen und Sehtests. Persönliche Beratung und eigene Werkstatt.',
     telephone: '+49221551166',
-    telephoneDisplay: '0221.551166',
+    telephoneDisplay: '0221 551166',
     email: 'dumm@optikdumm.de',
     address: {
         street: 'Iltisstraße 9',
