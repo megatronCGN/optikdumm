@@ -17,7 +17,7 @@
             #}
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width,initial-scale=1">
-            <title>Optik Dumm {{ '- ' ~ title }}</title>
+            <title>{% if title %}{{ title }} – {% endif %}Optik Dumm | Ihr Optiker in Köln-Ehrenfeld</title>
 
             {#------- Synchronous JS -------#}
             {# JS go/nogo #}
@@ -33,6 +33,41 @@
 
             {#------- Deferred JS -------#}
             <script src="/js/main.js" type="module" defer="defer"></script>
+
+            {#------- SEO meta tags -------#}
+            <meta name="description" content="{{ beschreibung or site.defaultDescription }}">
+            <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+            {% if noindex %}<meta name="robots" content="noindex,follow">{% endif %}
+
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Optician",
+                    "name": "{{ site.name }}",
+                    "legalName": "{{ site.legalName }}",
+                    "url": "{{ site.url }}",
+                    "telephone": "{{ site.telephone }}",
+                    "email": "{{ site.email }}",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "{{ site.address.street }}",
+                        "postalCode": "{{ site.address.postalCode }}",
+                        "addressLocality": "{{ site.address.city }}",
+                        "addressCountry": "{{ site.address.country }}"
+                    },
+                    "hasMap": "{{ site.googleMapsUrl }}",
+                    "openingHoursSpecification": [
+                        {% for slot in site.openingHours %}
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [{% for day in slot.days %}"{{ day }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+                            "opens": "{{ slot.opens }}",
+                            "closes": "{{ slot.closes }}"
+                        }{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    ]
+                }
+            </script>
     </head>
 
     <body>

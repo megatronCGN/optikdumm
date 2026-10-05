@@ -7,6 +7,12 @@ export default function (eleventyConfig) {
     // Input directory: src
     // Output directory: _site
 
+    eleventyConfig.setChokidarConfig({
+        usePolling: true,
+        interval: 300,
+    });
+
+    eleventyConfig.addPassthroughCopy('src/robots.txt');
     eleventyConfig.addPassthroughCopy('src/img/*.svg');
     eleventyConfig.addPassthroughCopy('src/img/marken/*.*');
     eleventyConfig.addPassthroughCopy('src/fonts');
